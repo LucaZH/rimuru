@@ -40,6 +40,7 @@ def main():
                         else:
                             if user_state == 'HOSPITAL':
                                 database.updateState(sender_id,'HOSPITAL',query=query)
+                                Rimuru.menu_hospital(sender_id)
 
 
                     if 'quick_reply' in messaging_event['message']:
