@@ -136,7 +136,15 @@ class Messenger:
             "payload": json.dumps({
                 'query_hosp': 'Aider',
             })
+        },
+        {
+            'content_type': 'text',
+            'title': 'Retour au menu principal',
+            "payload": json.dumps({
+                'query_hosp': 'main_menu',
+            })
         }
+        
         ])
     def get_stared(self):
         data = { 

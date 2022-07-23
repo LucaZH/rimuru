@@ -1,3 +1,4 @@
+from turtle import update
 from flask import Flask, request
 from conf import *
 from tools.Bot.messenger import Messenger
@@ -73,10 +74,20 @@ def main():
                                 Rimuru.send_text(sender_id, 'CONSEIL : Developpement du projet en cours')
                             elif 'query_hosp' in payload:
                                 print('tonga ========')
-                                query_hosp= database.getquery(sender_id)
-                                res= query_hosp + '  == >Resulta'
-                                Rimuru.send_text(sender_id,res)
-                                print(res)
+                                if payload['query_hosp']=='Rechercher':
+                                    query_hosp= database.getquery(sender_id)
+                                    res= query_hosp + '  == >Resultats rechercher'
+                                    Rimuru.send_text(sender_id,res)
+                                    print(res)
+                                    database.updateState(sender_id,'START')
+                                elif payload['query_hosp']=='Aider':
+                                    query_hosp= database.getquery(sender_id)
+                                    res= query_hosp + '  == >Resultats Ajouter , merci pour votre contribution \n l admin verifiera votre ajout'
+                                    Rimuru.send_text(sender_id,res)
+                                    print(res)
+                                    database.updateState(sender_id,'START')
+                                elif payload['query_hosp']=='main_menu':
+                                    database.updateState(sender_id,'START')
                 elif 'postback' in messaging_event:
                     if 'payload' in messaging_event['postback']:
                         pload = messaging_event['postback']['payload']
