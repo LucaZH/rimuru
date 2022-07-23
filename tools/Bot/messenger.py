@@ -127,7 +127,7 @@ class Messenger:
             'content_type': 'text',
             'title': 'Rechercher',
             "payload": json.dumps({
-                'query_hosp': 'Continuer',
+                'query_hosp': 'Rechercher',
             })
         },
         {
