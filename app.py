@@ -48,7 +48,7 @@ def main():
                                     print('get all user ====>')
                                     print(usergeted)
 
-                                    Rimuru.send_text(sender_id,usergeted)
+                                    Rimuru.send_text(sender_id,usergeted[2])
                                 elif payload['menu'] =='pharmacie':
                                     Rimuru.send_text(sender_id,'pharmacie : Developpement du projet en cours')
 
