@@ -18,7 +18,6 @@ def handle_verification():
     
 @app.route('/', methods=['POST'])
 def main():
-    database.createTableUser()
     data = request.get_json()
     if data["object"] == "page":
         for entry in data["entry"]:
