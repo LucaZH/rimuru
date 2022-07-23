@@ -53,4 +53,22 @@ def getState(fb_id):
 	else:
 		# insertUser(fb_id)
 		return 'START'
-
+def getquery(fb_id):
+	select_query = 'SELECT query FROM users WHERE fb_id = %s'
+	cursor.execute(select_query, (fb_id,))
+	rslt = cursor.fetchone()
+	if len(rslt) > 0:
+		return rslt[0]
+	return None
+def updateState(fb_id, state, query=''):
+	if alreadyInDb(fb_id):
+		if state == 'HOSPITAL':
+			update_query = '''UPDATE users SET state = %s, query = %s WHERE fb_id = %s'''
+			cursor.execute(update_query, (state,query, fb_id))
+		else:
+			update_query = '''UPDATE users SET state = %s WHERE fb_id = %s'''
+			cursor.execute(update_query, (state, fb_id))
+		connection.commit()
+	else:
+		insertUser(fb_id, state)
+	print('State updated to', state)

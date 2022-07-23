@@ -23,14 +23,25 @@ def main():
         for entry in data["entry"]:
             for messaging_event in entry["messaging"]:
                 sender_id = messaging_event["sender"]["id"]
+                Rimuru.send_action(sender_id,"mark_seen")
+                user_state = database.getState(sender_id)
+                usergeted = database.getAllUser()
+                print('get all user ====>')
+                print(usergeted)
                 if messaging_event.get("message"):
                     if 'text' in messaging_event['message'] and 'quick_reply' not in messaging_event['message']:
-                        message_text = messaging_event["message"]["text"] 
-                        # recipient_id = messaging_event["recipient"]["id"]  
-                        # Rimuru.send_action(sender_id,"mark_seen")
-                        # Rimuru.send_text(sender_id,message_text)
-                        Rimuru.main_menu(sender_id)
-                        Rimuru.send_action(sender_id,"typing_off")
+                        query = messaging_event["message"]["text"]
+                        if user_state == 'START':
+                            # recipient_id = messaging_event["recipient"]["id"]  
+                            # Rimuru.send_action(sender_id,"mark_seen")
+                            # Rimuru.send_text(sender_id,message_text)
+                            Rimuru.main_menu(sender_id)
+                            Rimuru.send_action(sender_id,"typing_off")
+                        else:
+                            if user_state == 'HOSPITAL':
+                                database.updateState(sender_id,'HOSPITAL',query=query)
+
+
                     if 'quick_reply' in messaging_event['message']:
                         Rimuru.send_action(sender_id,"mark_seen")
                         payload = messaging_event['message']['quick_reply']['payload']
@@ -39,16 +50,14 @@ def main():
                             if 'menu' in payload:
                                 if payload['menu'] == 'hopital':
                                     Rimuru.send_text(sender_id,'Hopital : Developpement du projet en cours')
-                                    database.insertUser(sender_id)
-                                    Rimuru.send_text(sender_id,'Entrer votre localisation')
+                                    # database.insertUser(sender_id)
+                                    database.updateState(sender_id,'HOSPITAL')
+                                    Rimuru.send_action(sender_id,"ENtrer votre localisation")
+                                    
                                 elif payload['menu'] =='COVID19':
                                     Rimuru.send_action(sender_id,"typing_off")
                                     Rimuru.send_text(sender_id,'Covid-19 : Developpement du projet en cours')
-                                    usergeted = database.getAllUser()
-                                    print('get all user ====>')
-                                    print(usergeted)
-
-                                    Rimuru.send_text(sender_id,usergeted[0])
+                                    
                                 elif payload['menu'] =='pharmacie':
                                     Rimuru.send_text(sender_id,'pharmacie : Developpement du projet en cours')
 
@@ -62,6 +71,12 @@ def main():
                             elif 'conseil_covid19' in payload:
                                 
                                 Rimuru.send_text(sender_id, 'CONSEIL : Developpement du projet en cours')
+                            elif 'query_hosp' in payload:
+                                print('tonga ========')
+                                query_hosp= database.getquery(sender_id)
+                                res= query_hosp + '  == >Resulta'
+                                Rimuru.send_text(sender_id,res)
+                                print(res)
                 elif 'postback' in messaging_event:
                     if 'payload' in messaging_event['postback']:
                         pload = messaging_event['postback']['payload']
