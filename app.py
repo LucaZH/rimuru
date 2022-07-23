@@ -1,4 +1,3 @@
-from turtle import update
 from flask import Flask, request
 from conf import *
 from tools.Bot.messenger import Messenger
