@@ -44,7 +44,11 @@ def main():
                                 elif payload['menu'] =='COVID19':
                                     Rimuru.send_action(sender_id,"typing_off")
                                     Rimuru.send_text(sender_id,'Covid-19 : Developpement du projet en cours')
-                                    Rimuru.send_text(sender_id,database.getAllUser())
+                                    usergeted = database.getAllUser()
+                                    print('get all user ====>')
+                                    print(usergeted)
+
+                                    Rimuru.send_text(sender_id,usergeted)
                                 elif payload['menu'] =='pharmacie':
                                     Rimuru.send_text(sender_id,'pharmacie : Developpement du projet en cours')
 
