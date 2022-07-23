@@ -1,0 +1,9 @@
+Flask
+gunicorn
+idna
+itsdangerous
+Jinja2
+MarkupSafe
+requests
+beautifulsoup4
+psycopg2
