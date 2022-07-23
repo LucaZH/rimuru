@@ -122,10 +122,10 @@ class Messenger:
         }
         ])
     def menu_hospital(self,dest_id):
-        self.send_response_quickreply(dest_id, "Votre choix", [
+        self.send_response_quickreply(dest_id, "Cliquer sur Rechercher pour voir l'hopital la plus proche de vous ou Aider pour enregister l'hopital ", [
         {
             'content_type': 'text',
-            'title': 'Continuer',
+            'title': 'Rechercher',
             "payload": json.dumps({
                 'query_hosp': 'Continuer',
             })

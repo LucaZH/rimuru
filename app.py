@@ -50,10 +50,9 @@ def main():
                             payload = json.loads(payload)
                             if 'menu' in payload:
                                 if payload['menu'] == 'hopital':
-                                    Rimuru.send_text(sender_id,'Hopital : Developpement du projet en cours')
+                                    Rimuru.send_text(sender_id,'Bienvenu dans la fonctionnalité hospital . \n entrer votre localisation (ex: vatofotsy) ou enter le nom et la localisation de l hopital que vous voulez ajouter pour nous aider à completer la liste des hospital ')
                                     # database.insertUser(sender_id)
                                     database.updateState(sender_id,'HOSPITAL')
-                                    Rimuru.send_text(sender_id,"ENtrer votre localisation")
                                     
                                 elif payload['menu'] =='COVID19':
                                     Rimuru.send_action(sender_id,"typing_off")
