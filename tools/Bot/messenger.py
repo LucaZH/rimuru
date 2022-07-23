@@ -121,7 +121,23 @@ class Messenger:
             })
         }
         ])
-    
+    def menu_hospital(self,dest_id):
+        self.send_response_quickreply(dest_id, "Votre choix", [
+        {
+            'content_type': 'text',
+            'title': 'Continuer',
+            "payload": json.dumps({
+                'query_hosp': 'Continuer',
+            })
+        },
+        {
+            'content_type': 'text',
+            'title': 'Aider',
+            "payload": json.dumps({
+                'query_hosp': 'Aider',
+            })
+        }
+        ])
     def get_stared(self):
         data = { 
                 "get_started":{

@@ -52,7 +52,7 @@ def main():
                                     Rimuru.send_text(sender_id,'Hopital : Developpement du projet en cours')
                                     # database.insertUser(sender_id)
                                     database.updateState(sender_id,'HOSPITAL')
-                                    Rimuru.send_action(sender_id,"ENtrer votre localisation")
+                                    Rimuru.send_text(sender_id,"ENtrer votre localisation")
                                     
                                 elif payload['menu'] =='COVID19':
                                     Rimuru.send_action(sender_id,"typing_off")
