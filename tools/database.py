@@ -3,8 +3,6 @@ DATABASE_URL='postgres://cirkeiuyissbiu:d7f615f0364124da10bceecc52e92e075f81932b
 connection = psycopg2.connect(DATABASE_URL, sslmode='require')
 cursor = connection.cursor()
 
-# print(connection.get_dsn_parameters(), "\n")
-
 def createTableUser():
 	create_table_query = ''' CREATE TABLE users(
 		id_user SERIAL PRIMARY KEY  NOT NULL,
@@ -22,8 +20,6 @@ def dropTableUser():
 	connection.commit()
 	print('Table user deleted')
 
-# dropTableUser()
-# createTableUser()
 
 def alreadyInDb(fb_id):
 	select_query = '''SELECT * FROM users WHERE fb_id = %s'''

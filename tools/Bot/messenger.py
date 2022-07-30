@@ -1,5 +1,7 @@
 import json,requests
 from flask import request
+
+from tools.Bot.utils import get_news
 class Messenger:
     def __init__(self, ACCESS_TOKEN):
         self.ACCESS_TOKEN = ACCESS_TOKEN
@@ -69,83 +71,8 @@ class Messenger:
         headers = {"Content-Type": "application/json"}
         r = requests.post(self, data=json.dumps(data), headers=headers)
     
-    def memu(self,dest_id,text,title_text,title_menu,menu_text):
-        print("ggg")
-        payloads=[{
-        'content_type': 'text',
-        'title': title_text[i],
-        "payload": {
-        "title_menu": menu_text[i],
-            }
-        } for i in range(len(title_text))]
-        print(payloads)
-        self.send_response_quickreply(dest_id,text,payloads)
-        
-    def main_menu(self,dest_id):
-        self.send_response_quickreply(dest_id, "Qu'est ce que je peux faire pour vous?", [
-        {
-            'content_type': 'text',
-            'title': 'Conseil du jour',
-            "payload": json.dumps({
-                'menu': 'Conseil_du_jour',
-                
-            })
-        },
-        {
-            'content_type': 'text',
-            'title': 'Hopital',
-            "payload": json.dumps({
-                'menu': 'hopital',
-                
-            })
-        },
-        {
-            'content_type': 'text',
-            'title': 'Pharmacie',
-            "payload": json.dumps({
-                'menu': 'pharmacie',
-            })
-        },
-        {
-            'content_type': 'text',
-            'title': 'COVID-19',
-            "payload": json.dumps({
-                'menu': 'COVID19',
-            })
-        },
-        {
-            'content_type': 'text',
-            'title': 'A propos',
-            "payload": json.dumps({
-                'menu': 'Apropos',
-            })
-        }
-        ])
-    def menu_hospital(self,dest_id):
-        self.send_response_quickreply(dest_id, "Cliquer sur Rechercher pour voir l'hopital la plus proche de vous ou Aider pour enregister l'hopital ", [
-        {
-            'content_type': 'text',
-            'title': 'Rechercher',
-            "payload": json.dumps({
-                'query_hosp': 'Rechercher',
-            })
-        },
-        {
-            'content_type': 'text',
-            'title': 'Aider',
-            "payload": json.dumps({
-                'query_hosp': 'Aider',
-            })
-        },
-        {
-            'content_type': 'text',
-            'title': 'Retour au menu principal',
-            "payload": json.dumps({
-                'query_hosp': 'main_menu',
-            })
-        }
-        
-        ])
+    def send_menu(self,dest_id,menu,message):
+        return self.send_response_quickreply(dest_id,message,menu)
     def get_stared(self):
         data = { 
                 "get_started":{
@@ -157,3 +84,83 @@ class Messenger:
         r = requests.post('https://graph.facebook.com/v10.0/me/messenger_profile?access_token=' + self.ACCESS_TOKEN, data=json.dumps(data), headers=headers)
     def get_username(self,user_id):
         name = requests.get('https://graph.facebook.com/v2.6/' + user_id +'?access_token=' + self.ACCESS_TOKEN)
+    def send_news_suggestion(self,dest_id):
+        list_news = get_news()
+        if len(list_news)>=12:
+            current_list_news = list_news[:12]
+            splited_list_news = list_news[12:len(list_news)]
+            
+        else : 
+            current_list_news = list_news[:len(list_news)/2]
+            splited_list_news = list_news[len(list_news)/2:len(list_news)]
+
+        print(current_list_news)
+        data1 = {
+            "recipient": {
+                "id": f'{dest_id}'
+            },
+            "messaging_type": "response",
+            "message": {
+                "attachment": {
+                    "type": "template",
+                    "payload": {
+                        "template_type": "generic",
+                        "elements": [
+                            {
+                                "title": f"{news['title']}",
+                                "image_url": f"{news['thumbnail']}",
+                                "publishedTime": f"{news['publishedTime']}",
+
+                                "buttons": [
+                                    {
+                                        "type": "postback",
+                                        "title": "Lire",
+                                        "payload": json.dumps({
+                                            'read': news['url']
+                                        })
+                                    },
+                                ]
+                            } for news in current_list_news
+                        ]
+                    },
+                    
+                },
+            }
+        }
+        data2 = {
+            "recipient": {
+                "id": f'{dest_id}'
+            },
+            "messaging_type": "response",
+            "message": {
+                "attachment": {
+                    "type": "template",
+                    "payload": {
+                        "template_type": "generic",
+                        "elements": [
+                            {
+                                "title": f"{news['title']}",
+                                "image_url": f"{news['thumbnail']}",
+                                "publishedTime": f"{news['publishedTime']}",
+
+                                "buttons": [
+                                    {
+                                        "type": "postback",
+                                        "title": "Lire",
+                                        "payload": json.dumps({
+                                            'read': news['url']
+                                        })
+                                    },
+                                ]
+                            } for news in splited_list_news
+                        ]
+                    },
+                    
+                },
+            }
+        }
+        headers = {"Content-Type": "application/json"}
+        r1 = requests.post(self, data=json.dumps(data1), headers=headers)
+        r2 = requests.post(self, data=json.dumps(data2), headers=headers)
+        print(r1.content)
+        print(r2.content)
