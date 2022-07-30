@@ -1,5 +1,5 @@
 import psycopg2
-DATABASE_URL='postgres://cirkeiuyissbiu:d7f615f0364124da10bceecc52e92e075f81932be1be342c21ace660e24ff202@ec2-54-228-125-183.eu-west-1.compute.amazonaws.com:5432/d8b1hl94q822qg'
+DATABASE_URL='postgres://ofwrvkwbrjkvbo:ad9ca0160b40d8ba21d5bb9d22665a103dd09442f9ed2f39aec87b47a9d36206@ec2-52-49-120-150.eu-west-1.compute.amazonaws.com:5432/d6e5qti1c4fhrg'
 connection = psycopg2.connect(DATABASE_URL, sslmode='require')
 cursor = connection.cursor()
 
