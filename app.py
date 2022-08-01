@@ -96,7 +96,7 @@ def main():
                                 if payload['option_co'] == 'retry_co':
                                     Rimuru.send_text(sender_id,api.getrandomconseil())
                                     Rimuru.send_action(sender_id,'typing_off')
-                                    Rimuru.send_menu(sender_id,retry_co,'')
+                                    Rimuru.send_menu(sender_id,retry_co,'>>')
                                 if payload['option_co'] == 'main_menu':
                                     api.updateinfo(sender_id,'START')
                                     Rimuru.send_menu(sender_id,main_menu,f"'{message_menu[0]}'")
