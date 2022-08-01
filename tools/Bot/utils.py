@@ -62,19 +62,19 @@ menu_hopital = [
             })
         }
         ]
-retry = [
+retry_co = [
     {
             'content_type': 'text',
             'title': 'Réesayer',
             "payload": json.dumps({
-                'option': 'retry',
+                'option_co': 'retry',
             })
         },
         {
             'content_type': 'text',
             'title': 'Menu principal',
             "payload": json.dumps({
-                'option': 'main_menu',
+                'option_co': 'main_menu',
             })
         },
 ]

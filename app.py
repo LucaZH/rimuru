@@ -39,7 +39,8 @@ def main():
                                 Rimuru.send_menu(sender_id,menu_hopital,"choix")
                             if user_state == 'CONSEIL':
                                 Rimuru.send_text(sender_id,api.getrandomconseil())
-                                Rimuru.send_menu(sender_id,retry,'cliquer sur ces bouton')
+                                Rimuru.send_action(sender_id,'typing_off')
+                                Rimuru.send_menu(sender_id,retry_co,'cliquer sur ces bouton')
 
                                 
 
@@ -65,8 +66,9 @@ def main():
 
                                 elif payload['menu'] =='Conseil_du_jour':
                                     api.updateinfo(sender_id,'CONSEIL')
+                                    Rimuru.send_action(sender_id,'typing_off')
                                     Rimuru.send_text(sender_id,api.getrandomconseil())
-                                    Rimuru.send_menu(sender_id,retry,'cliquer sur ces bouton')
+                                    Rimuru.send_menu(sender_id,retry_co,'cliquer sur ces bouton')
                                 elif payload['menu'] =='Apropos':
                                     Rimuru.send_text(sender_id,'Devollopé par RANDRIAMANANTENA Luca Zo Haingo')
                             elif 'actualite_covid19' in payload:
@@ -90,12 +92,14 @@ def main():
                                     api.updateinfo(sender_id,'START')
                                 elif payload['query_hosp']=='main_menu':
                                     api.updateinfo(sender_id,'START')
-                            elif 'option' in payload:
-                                if payload['option'] == 'retry':
+                            elif 'option_co' in payload:
+                                if payload['option_co'] == 'retry_co':
                                     Rimuru.send_text(sender_id,api.getrandomconseil())
-                                    Rimuru.send_menu(sender_id,retry,'cliquer sur ces bouton')
-                                if payload['option'] == 'main_menu':
+                                    Rimuru.send_action(sender_id,'typing_off')
+                                    Rimuru.send_menu(sender_id,retry_co,'')
+                                if payload['option_co'] == 'main_menu':
                                     api.updateinfo(sender_id,'START')
+                                    Rimuru.send_menu(sender_id,main_menu,f"'{message_menu[0]}'")
                 elif 'postback' in messaging_event:
                     if 'payload' in messaging_event['postback']:
                         pload = messaging_event['postback']['payload']
