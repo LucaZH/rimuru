@@ -1,6 +1,6 @@
-import requests,json,random
+import requests,json,random,os
 
-url = 'http://127.0.0.1:8000/'
+url = os.environ.get('urlpy')
 headers = {"Content-Type": "application/json"}
 
 def verifyuser(fb_id):
@@ -59,7 +59,7 @@ def getrandomconseil():
     randn = random.randrange(1,len(r.json()))
     return getconseil(randn)
         
-    
+print(os.environ.get('urlpy'))
 # print(getrandomconseil())
 # print(getconseil(5))
 # print(getuserinfo("123","all"))
