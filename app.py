@@ -37,7 +37,10 @@ def main():
                             if user_state == 'HOSPITAL':
                                 api.updateinfo(sender_id,'HOSPITAL',query=query)
                                 Rimuru.send_menu(sender_id,menu_hopital,"choix")
-                            
+                            if user_state == 'CONSEIL':
+                                Rimuru.send_text(sender_id,api.getrandomconseil())
+                                Rimuru.send_menu(sender_id,retry,'cliquer sur ces bouton')
+
                                 
 
 

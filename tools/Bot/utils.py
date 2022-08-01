@@ -79,10 +79,10 @@ retry = [
         },
 ]
 message_menu=["Qu'est ce que je peux faire pour vous?","Cliquer sur Rechercher pour voir l'hopital la plus proche de vous ou Aider pour enregister l'hopital "]
-print(main_menu[0])
-# print(main_menu[0:len(main_menu)%2])
-# print(main_menu[len(main_menu)%2:len(main_menu)])
-print(f"'{message_menu[0]}'")
+# print(main_menu[0])
+# # print(main_menu[0:len(main_menu)%2])
+# # print(main_menu[len(main_menu)%2:len(main_menu)])
+# print(f"'{message_menu[0]}'")
 
 def get_news():
     listnews = []
