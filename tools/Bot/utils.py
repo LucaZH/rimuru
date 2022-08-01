@@ -67,7 +67,7 @@ retry_co = [
             'content_type': 'text',
             'title': 'Réesayer',
             "payload": json.dumps({
-                'option_co': 'retry',
+                'option_co': 'retry_co',
             })
         },
         {
