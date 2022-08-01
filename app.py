@@ -36,7 +36,13 @@ def main():
                         else:
                             if user_state == 'HOSPITAL':
                                 api.updateinfo(sender_id,'HOSPITAL',query=query)
-                                Rimuru.menu_hospital(sender_id)
+                                Rimuru.send_menu(sender_id,menu_hopital,"choix")
+                            if user_state == "CONSEIL":
+                                Rimuru.send_text(sender_id,api.getrandomconseil())
+                                Rimuru.send_menu(sender_id,retry,'cliquer sur ces bouton')
+                                
+
+
 
 
                     if 'quick_reply' in messaging_event['message']:
@@ -57,7 +63,7 @@ def main():
                                     Rimuru.send_text(sender_id,'pharmacie : Developpement du projet en cours')
 
                                 elif payload['menu'] =='Conseil_du_jour':
-                                    Rimuru.send_text(sender_id,api.getrandomconseil())
+                                    api.updateinfo(sender_id,'CONSEIL')
                                 elif payload['menu'] =='Apropos':
                                     Rimuru.send_text(sender_id,'Devollopé par RANDRIAMANANTENA Luca Zo Haingo')
                             elif 'actualite_covid19' in payload:
@@ -81,6 +87,11 @@ def main():
                                     print(res)
                                     api.updateinfo(sender_id,'START')
                                 elif payload['query_hosp']=='main_menu':
+                                    api.updateinfo(sender_id,'START')
+                            elif 'option' in payload:
+                                if payload['option'] == 'retry':
+                                    Rimuru.send_text(sender_id,"d'accord")
+                                if payload['option'] == 'main_menu':
                                     api.updateinfo(sender_id,'START')
                 elif 'postback' in messaging_event:
                     if 'payload' in messaging_event['postback']:

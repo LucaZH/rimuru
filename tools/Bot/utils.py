@@ -62,6 +62,22 @@ menu_hopital = [
             })
         }
         ]
+retry = [
+    {
+            'content_type': 'text',
+            'title': 'Réesayer',
+            "payload": json.dumps({
+                'option': 'retry',
+            })
+        },
+        {
+            'content_type': 'text',
+            'title': 'Menu principal',
+            "payload": json.dumps({
+                'option': 'main_menu',
+            })
+        },
+]
 message_menu=["Qu'est ce que je peux faire pour vous?","Cliquer sur Rechercher pour voir l'hopital la plus proche de vous ou Aider pour enregister l'hopital "]
 print(main_menu[0])
 # print(main_menu[0:len(main_menu)%2])

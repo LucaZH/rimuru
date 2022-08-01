@@ -68,3 +68,8 @@ print(os.environ.get('urlpy'))
 # verifyuser("2342344")
 # r = requests.get(f'{url}api/user/', headers=headers)
 # print(r.json())
+# conseil = {
+#     "text": "Evite les choses trop sucree"
+# }
+# r = requests.post("https://rimuruadmin.herokuapp.com/api/conseil/",data=json.dumps(conseil),headers=headers)
+# print(f"{r} {r.content}")
