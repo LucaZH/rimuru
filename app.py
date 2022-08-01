@@ -31,7 +31,7 @@ def main():
                     if 'text' in messaging_event['message'] and 'quick_reply' not in messaging_event['message']:
                         query = messaging_event["message"]["text"]
                         if user_state == 'START':
-                            Rimuru.send_menu(sender_id,main_menu,message_menu)
+                            Rimuru.send_menu(sender_id,main_menu,f"'{message_menu[0]}'")
                             Rimuru.send_action(sender_id,"typing_off")
                         else:
                             if user_state == 'HOSPITAL':
