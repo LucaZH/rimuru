@@ -1,7 +1,7 @@
 from flask import Flask, request
 from conf import *
 from tools.Bot.messenger import Messenger
-from tools import database
+from tools import api
 import json
 
 app = Flask(__name__)
@@ -23,23 +23,18 @@ def main():
         for entry in data["entry"]:
             for messaging_event in entry["messaging"]:
                 sender_id = messaging_event["sender"]["id"]
+                api.verifyuser(sender_id)
                 Rimuru.send_action(sender_id,"mark_seen")
-                user_state = database.getState(sender_id)
-                usergeted = database.getAllUser()
-                print('get all user ====>')
-                print(usergeted)
+                user_state = api.getuserinfo(sender_id,"state")
                 if messaging_event.get("message"):
                     if 'text' in messaging_event['message'] and 'quick_reply' not in messaging_event['message']:
                         query = messaging_event["message"]["text"]
                         if user_state == 'START':
-                            # recipient_id = messaging_event["recipient"]["id"]  
-                            # Rimuru.send_action(sender_id,"mark_seen")
-                            # Rimuru.send_text(sender_id,message_text)
                             Rimuru.main_menu(sender_id)
                             Rimuru.send_action(sender_id,"typing_off")
                         else:
                             if user_state == 'HOSPITAL':
-                                database.updateState(sender_id,'HOSPITAL',query=query)
+                                api.updateinfo(sender_id,'HOSPITAL',query=query)
                                 Rimuru.menu_hospital(sender_id)
 
 
@@ -51,8 +46,7 @@ def main():
                             if 'menu' in payload:
                                 if payload['menu'] == 'hopital':
                                     Rimuru.send_text(sender_id,'Bienvenu dans la fonctionnalité hospital . \n entrer votre localisation (ex: vatofotsy) ou enter le nom et la localisation de l hopital que vous voulez ajouter pour nous aider à completer la liste des hospital ')
-                                    # database.insertUser(sender_id)
-                                    database.updateState(sender_id,'HOSPITAL')
+                                    api.updateinfo(sender_id,'HOSPITAL')
                                     
                                 elif payload['menu'] =='COVID19':
                                     Rimuru.send_action(sender_id,"typing_off")
@@ -62,7 +56,7 @@ def main():
                                     Rimuru.send_text(sender_id,'pharmacie : Developpement du projet en cours')
 
                                 elif payload['menu'] =='Conseil_du_jour':
-                                    Rimuru.send_text(sender_id,'Conseil du jour : Developpement du projet en cours')
+                                    Rimuru.send_text(sender_id,api.getrandomconseil())
                                 elif payload['menu'] =='Apropos':
                                     Rimuru.send_text(sender_id,'Devollopé par RANDRIAMANANTENA Luca Zo Haingo')
                             elif 'actualite_covid19' in payload:
@@ -74,19 +68,19 @@ def main():
                             elif 'query_hosp' in payload:
                                 print('tonga ========')
                                 if payload['query_hosp']=='Rechercher':
-                                    query_hosp= database.getquery(sender_id)
+                                    query_hosp= api.getuserinfo(sender_id,'query')
                                     res= query_hosp + '  == >Resultats rechercher'
                                     Rimuru.send_text(sender_id,res)
                                     print(res)
-                                    database.updateState(sender_id,'START')
+                                    api.updateinfo(sender_id,'START')
                                 elif payload['query_hosp']=='Aider':
-                                    query_hosp= database.getquery(sender_id)
+                                    query_hosp= api.getuserinfo(sender_id,'query')
                                     res= query_hosp + '  == >Resultats Ajouter , merci pour votre contribution \n l admin verifiera votre ajout'
                                     Rimuru.send_text(sender_id,res)
                                     print(res)
-                                    database.updateState(sender_id,'START')
+                                    api.updateinfo(sender_id,'START')
                                 elif payload['query_hosp']=='main_menu':
-                                    database.updateState(sender_id,'START')
+                                    api.updateinfo(sender_id,'START')
                 elif 'postback' in messaging_event:
                     if 'payload' in messaging_event['postback']:
                         pload = messaging_event['postback']['payload']
