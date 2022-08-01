@@ -3,6 +3,7 @@ from conf import *
 from tools.Bot.messenger import Messenger
 from tools import api
 import json
+from tools.Bot.utils import *
 
 app = Flask(__name__)
 Rimuru = Messenger(ACCESS_TOKEN)
@@ -30,7 +31,7 @@ def main():
                     if 'text' in messaging_event['message'] and 'quick_reply' not in messaging_event['message']:
                         query = messaging_event["message"]["text"]
                         if user_state == 'START':
-                            Rimuru.main_menu(sender_id)
+                            Rimuru.send_menu(sender_id,main_menu,message_menu)
                             Rimuru.send_action(sender_id,"typing_off")
                         else:
                             if user_state == 'HOSPITAL':
