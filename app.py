@@ -31,7 +31,7 @@ def main():
                     if 'text' in messaging_event['message'] and 'quick_reply' not in messaging_event['message']:
                         query = messaging_event["message"]["text"]
                         if user_state == 'START':
-                            Rimuru.send_menu(sender_id,main_menu,f"'{message_menu[0]}'")
+                            Rimuru.send_menu(sender_id,main_menu,f"{message_menu[0]}")
                             Rimuru.send_action(sender_id,"typing_off")
                         else:
                             if user_state == 'HOSPITAL':
@@ -68,7 +68,7 @@ def main():
                                     api.updateinfo(sender_id,'CONSEIL')
                                     Rimuru.send_action(sender_id,'typing_off')
                                     Rimuru.send_text(sender_id,api.getrandomconseil())
-                                    Rimuru.send_menu(sender_id,retry_co,'cliquer sur ces bouton')
+                                    Rimuru.send_menu(sender_id,retry_co,"Qu'est ce que vous voullez faire?")
                                 elif payload['menu'] =='Apropos':
                                     Rimuru.send_text(sender_id,'Devollopé par RANDRIAMANANTENA Luca Zo Haingo')
                             elif 'actualite_covid19' in payload:
@@ -77,7 +77,6 @@ def main():
                             elif 'conseil_covid19' in payload:
                                 Rimuru.send_text(sender_id, 'CONSEIL : Developpement du projet en cours')
                             elif 'query_hosp' in payload:
-                                print('tonga ========')
                                 if payload['query_hosp']=='Rechercher':
                                     query_hosp= api.getuserinfo(sender_id,'query')
                                     res= query_hosp + '  == >Resultats rechercher'
@@ -95,7 +94,7 @@ def main():
                             elif 'option_co' in payload:
                                 if payload['option_co'] == 'retry_co':
                                     Rimuru.send_text(sender_id,api.getrandomconseil())
-                                    Rimuru.send_menu(sender_id,retry_co,'>>')
+                                    Rimuru.send_menu(sender_id,retry_co,"Qu'est ce que vous voullez faire?")
                                 if payload['option_co'] == 'main_menu':
                                     api.updateinfo(sender_id,'START')
                                     Rimuru.send_menu(sender_id,main_menu,f"'{message_menu[0]}'")
