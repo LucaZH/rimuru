@@ -64,7 +64,7 @@ def gethopital():
     hosp = r.json()
     return hosp
 def inserthopital(name,localisation,contact,published_id):
-
+    
     print(os.environ.get('urlpy'))
 # print(getrandomconseil())
 # print(getconseil(5))
