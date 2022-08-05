@@ -11,9 +11,9 @@ main_menu  = [
         },
         {
             'content_type': 'text',
-            'title': 'Hopital',
+            'title': 'Centre Medical',
             "payload": json.dumps({
-                'menu': 'hopital',
+                'menu': 'CM',
                 
             })
         },
@@ -26,9 +26,9 @@ main_menu  = [
         },
         {
             'content_type': 'text',
-            'title': 'COVID-19',
+            'title': 'Actualités',
             "payload": json.dumps({
-                'menu': 'COVID19',
+                'menu': 'Actualités',
             })
         },
         {
@@ -39,7 +39,7 @@ main_menu  = [
             })
         }
         ]
-menu_hopital = [
+menu_CM = [
         {
             'content_type': 'text',
             'title': 'Rechercher',

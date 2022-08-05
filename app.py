@@ -34,9 +34,14 @@ def main():
                             Rimuru.send_menu(sender_id,main_menu,f"{message_menu[0]}")
                             Rimuru.send_action(sender_id,"typing_off")
                         else:
-                            if user_state == 'HOSPITAL':
-                                api.updateinfo(sender_id,'HOSPITAL',query=query)
-                                Rimuru.send_menu(sender_id,menu_hopital,"choix")
+                            if user_state == 'CM_SC':
+                                api.updateinfo(sender_id,'START',query=query)
+                                Rimuru.send_text(sender_id,f"Votre localisation {query}")
+                                Rimuru.send_menu(sender_id,main_menu,f"{message_menu[0]}")
+                            if user_state == 'CM_HE':
+                                api.updateinfo(sender_id,'START',query=query)
+                                Rimuru.send_text(sender_id,f"Info ajouter {query}")
+                                Rimuru.send_menu(sender_id,main_menu,f"{message_menu[0]}")
                             if user_state == 'CONSEIL':
                                 Rimuru.send_text(sender_id,api.getrandomconseil())
                                 Rimuru.send_action(sender_id,'typing_off')
@@ -53,13 +58,14 @@ def main():
                         if is_json(payload):
                             payload = json.loads(payload)
                             if 'menu' in payload:
-                                if payload['menu'] == 'hopital':
-                                    Rimuru.send_text(sender_id,'Bienvenu dans la fonctionnalité hospital . \n entrer votre localisation (ex: vatofotsy) ou enter le nom et la localisation de l hopital que vous voulez ajouter pour nous aider à completer la liste des hospital ')
-                                    api.updateinfo(sender_id,'HOSPITAL')
-                                    
-                                elif payload['menu'] =='COVID19':
+                                if payload['menu'] == 'CM':
+                                    Rimuru.send_text(sender_id,'Bienvenu dans la fonctionnalité hospital ')
+                                    # api.updateinfo(sender_id,'CENTREMEDICAL')
+                                    Rimuru.send_menu(sender_id,menu_CM,"choix")
+                                elif payload['menu'] =='Actualités':
                                     Rimuru.send_action(sender_id,"typing_off")
-                                    Rimuru.send_text(sender_id,'Covid-19 : Developpement du projet en cours')
+                                    Rimuru.send_text(sender_id,'Actualités Santé: Developpement du projet en cours')
+                                    Rimuru.send_menu(sender_id,main_menu,f"'{message_menu[0]}'")
                                     
                                 elif payload['menu'] =='pharmacie':
                                     Rimuru.send_text(sender_id,'pharmacie : Developpement du projet en cours')
@@ -78,17 +84,17 @@ def main():
                                 Rimuru.send_text(sender_id, 'CONSEIL : Developpement du projet en cours')
                             elif 'query_hosp' in payload:
                                 if payload['query_hosp']=='Rechercher':
-                                    query_hosp= api.getuserinfo(sender_id,'query')
-                                    res= query_hosp + '  == >Resultats rechercher'
-                                    Rimuru.send_text(sender_id,res)
-                                    print(res)
-                                    api.updateinfo(sender_id,'START')
+                                    # query_hosp= api.getuserinfo(sender_id,'query')
+                                    # res= query_hosp + '  == >Resultats rechercher'
+                                    # Rimuru.send_text(sender_id,res)
+                                    Rimuru.send_text(sender_id,"Entrer votre localisation")
+                                    api.updateinfo(sender_id,'CM_SC')
                                 elif payload['query_hosp']=='Aider':
-                                    query_hosp= api.getuserinfo(sender_id,'query')
-                                    res= query_hosp + '  == >Resultats Ajouter , merci pour votre contribution \n l admin verifiera votre ajout'
-                                    Rimuru.send_text(sender_id,res)
-                                    print(res)
-                                    api.updateinfo(sender_id,'START')
+                                    # query_hosp= api.getuserinfo(sender_id,'query')
+                                    # res= query_hosp + '  == >Resultats Ajouter , merci pour votre contribution \n l admin verifiera votre ajout'
+                                    # Rimuru.send_text(sender_id,res)
+                                    Rimuru.send_text(sender_id,"Entrer le centre medical ou hopital que vous voulez ajouter")
+                                    api.updateinfo(sender_id,'CM_HE')
                                 elif payload['query_hosp']=='main_menu':
                                     api.updateinfo(sender_id,'START')
                             elif 'option_co' in payload:
@@ -97,7 +103,7 @@ def main():
                                     Rimuru.send_menu(sender_id,retry_co,"Qu'est ce que vous voullez faire?")
                                 if payload['option_co'] == 'main_menu':
                                     api.updateinfo(sender_id,'START')
-                                    Rimuru.send_menu(sender_id,main_menu,f"'{message_menu[0]}'")
+                                    Rimuru.send_menu(sender_id,main_menu,f"{message_menu[0]}")
                 elif 'postback' in messaging_event:
                     if 'payload' in messaging_event['postback']:
                         pload = messaging_event['postback']['payload']
