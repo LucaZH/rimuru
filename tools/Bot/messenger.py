@@ -171,7 +171,7 @@ class Messenger:
             "titre":tittreinfo[i],
             "text": linfo[i],
         })
-    
+        print(listinfofact)
         data = {
             "recipient": {
                 "id": f'{dest_id}'
@@ -199,10 +199,19 @@ class Messenger:
                                 ]
                             } for info in listinfofact
                         ]
-                    },
-                    
-                },
-            }
+                    },            
+        },
+        "quick_replies": [
+                {	
+	                'content_type': 'text',
+		    		'title': 'Page suivante',
+		    		'payload': json.dumps({
+		    			'page': 'page+1',
+		    			'query': 'query'
+		    			})
+    			}
+            ]
+            },
         }
         headers = {"Content-Type": "application/json"}
         r = requests.post(self.url, data=json.dumps(data), headers=headers)
