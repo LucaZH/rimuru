@@ -179,7 +179,7 @@ class Messenger:
                         "elements": [
                             {
                                 "title": f"{info['titre']}",
-                                "image_url": f"https://cdn-icons-png.flaticon.com/512/2764/2764545.png",
+                                "image_url": "https://cdn-icons-png.flaticon.com/512/2764/2764545.png",
                                 "info": f"{info['text']}",
 
                                 "buttons": [
