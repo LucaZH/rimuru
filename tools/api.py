@@ -60,11 +60,10 @@ def getrandomconseil():
     return getconseil(randn)
 
 def gethopital():
-    r = requests.get(f'{url}api/hopital/',headers=headers)
-    hosp = r.json()
-    return hosp
+    r = requests.get(f'{url}api/cm/',headers=headers)
+    cm = r.json()
+    return cm
 def inserthopital(name,localisation,contact,published_id):
-    
     print(os.environ.get('urlpy'))
 # print(getrandomconseil())
 # print(getconseil(5))
@@ -79,4 +78,4 @@ def inserthopital(name,localisation,contact,published_id):
 # }
 # r = requests.post("https://rimuruadmin.herokuapp.com/api/conseil/",data=json.dumps(conseil),headers=headers)
 # print(f"{r} {r.content}")
-print(gethopital())
+# print(gethopital())
