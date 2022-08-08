@@ -69,7 +69,7 @@ class Messenger:
             }
         }
         headers = {"Content-Type": "application/json"}
-        r = requests.post(self, data=json.dumps(data), headers=headers)
+        r = requests.post(self.url, data=json.dumps(data), headers=headers)
     
     def send_menu(self,dest_id,menu,message):
         return self.send_response_quickreply(dest_id,message,menu)
@@ -199,5 +199,5 @@ class Messenger:
             }
         }
         headers = {"Content-Type": "application/json"}
-        r1 = requests.post(self, data=json.dumps(data1), headers=headers)
+        r1 = requests.post(self.url, data=json.dumps(data1), headers=headers)
         print("fait")
