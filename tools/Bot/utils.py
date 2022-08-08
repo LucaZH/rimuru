@@ -103,13 +103,13 @@ def get_news():
             })
     return listnews
 
-def info():
-    listeinfo=[]
-    for i in range(6):
-        listeinfo.append({
-        "titre":tittreinfo[i],
-        "text": linfo[i],
-    })
-    return listeinfo
+# def info():
+#     listeinfo=[]
+#     for i in range(6):
+#         listeinfo.append({
+#         "titre":tittreinfo[i],
+#         "text": linfo[i],
+#     })
+#     return listeinfo
 
 
