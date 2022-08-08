@@ -12,6 +12,7 @@ main_menu  = [
         {
             'content_type': 'text',
             'title': 'Centre Medical',
+            'image_url':'https://www.shareicon.net/data/512x512/2016/08/04/806609_medical_512x512.png',
             "payload": json.dumps({
                 'menu': 'CM',
                 
@@ -20,6 +21,7 @@ main_menu  = [
         {
             'content_type': 'text',
             'title': 'Pharmacie',
+            'image_url':"https://thumbs.dreamstime.com/b/pharmacy-location-blue-map-pin-icon-element-map-point-mobile-concept-web-apps-icon-website-design-109712535.jpg",
             "payload": json.dumps({
                 'menu': 'pharmacie',
             })
@@ -27,6 +29,7 @@ main_menu  = [
         {
             'content_type': 'text',
             'title': 'Info santé',
+            'image_url':"https://cdn-icons-png.flaticon.com/512/2764/2764545.png",
             "payload": json.dumps({
                 'menu': 'Actualités',
             })
@@ -34,6 +37,7 @@ main_menu  = [
         {
             'content_type': 'text',
             'title': 'A propos',
+            'image_url': "https://icon-library.com/images/about-us-icon/about-us-icon-8.jpg",
             "payload": json.dumps({
                 'menu': 'Apropos',
             })
@@ -111,5 +115,5 @@ def info():
         "text": linfo[i],
     })
     return listeinfo
-print(info())
+
 

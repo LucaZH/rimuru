@@ -1,7 +1,7 @@
 import json,requests
 from flask import request
 
-from tools.Bot.utils import get_news, info
+from tools.Bot.utils import *
 class Messenger:
     def __init__(self, ACCESS_TOKEN):
         self.ACCESS_TOKEN = ACCESS_TOKEN
@@ -165,7 +165,13 @@ class Messenger:
         print(r1.content)
         print(r2.content)
     def send_info_fact(self,dest_id):
-        listinfofact=info()
+        listinfofact=[]
+        for i in range(6):
+            listinfofact.append({
+            "titre":tittreinfo[i],
+            "text": linfo[i],
+        })
+    
         data = {
             "recipient": {
                 "id": f'{dest_id}'
