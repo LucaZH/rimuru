@@ -1,7 +1,7 @@
 import json,requests
 from flask import request
 
-from tools.Bot.utils import get_news
+from tools.Bot.utils import get_news, info
 class Messenger:
     def __init__(self, ACCESS_TOKEN):
         self.ACCESS_TOKEN = ACCESS_TOKEN
@@ -164,3 +164,40 @@ class Messenger:
         r2 = requests.post(self, data=json.dumps(data2), headers=headers)
         print(r1.content)
         print(r2.content)
+    def send_info_fact(self,dest_id):
+        listinfofact=info()
+        data1 = {
+            "recipient": {
+                "id": f'{dest_id}'
+            },
+            "messaging_type": "response",
+            "message": {
+                "attachment": {
+                    "type": "template",
+                    "payload": {
+                        "template_type": "generic",
+                        "elements": [
+                            {
+                                "title": f"{info['title']}",
+                                "image_url": f"google.mg",
+                                "info": f"{info['text']}",
+
+                                "buttons": [
+                                    {
+                                        "type": "postback",
+                                        "title": "Lire",
+                                        "payload": json.dumps({
+                                            'read': info['text']
+                                        })
+                                    },
+                                ]
+                            } for info in listinfofact
+                        ]
+                    },
+                    
+                },
+            }
+        }
+        headers = {"Content-Type": "application/json"}
+        r1 = requests.post(self, data=json.dumps(data1), headers=headers)
+        print("fait")

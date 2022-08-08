@@ -64,7 +64,7 @@ def main():
                                     Rimuru.send_menu(sender_id,menu_CM,"choix")
                                 elif payload['menu'] =='Actualités':
                                     Rimuru.send_action(sender_id,"typing_off")
-                                    Rimuru.send_text(sender_id,'Actualités Santé: Developpement du projet en cours')
+                                    Rimuru.send_info_fact(sender_id)
                                     Rimuru.send_menu(sender_id,main_menu,f"'{message_menu[0]}'")
                                     
                                 elif payload['menu'] =='pharmacie':
