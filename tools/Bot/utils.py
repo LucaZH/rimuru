@@ -4,6 +4,7 @@ main_menu  = [
         {
             'content_type': 'text',
             'title': 'Conseil du jour',
+            'image_url':"https://cdn-icons-png.flaticon.com/512/3938/3938718.png",
             "payload": json.dumps({
                 'menu': 'Conseil_du_jour',
                 
@@ -21,7 +22,7 @@ main_menu  = [
         {
             'content_type': 'text',
             'title': 'Pharmacie',
-            'image_url':"https://thumbs.dreamstime.com/b/pharmacy-location-blue-map-pin-icon-element-map-point-mobile-concept-web-apps-icon-website-design-109712535.jpg",
+            'image_url':"https://cdn3.iconfinder.com/data/icons/maps-and-navigation-flat-icons-vol-2/256/77-512.png",
             "payload": json.dumps({
                 'menu': 'pharmacie',
             })
@@ -70,6 +71,7 @@ retry_co = [
     {
             'content_type': 'text',
             'title': 'Réesayer',
+            'image_url':"https://w7.pngwing.com/pngs/202/842/png-transparent-computer-icons-retry-cdr-trademark-logo.png",
             "payload": json.dumps({
                 'option_co': 'retry_co',
             })
@@ -77,6 +79,7 @@ retry_co = [
         {
             'content_type': 'text',
             'title': 'Menu principal',
+            'image_url':'https://cdn-icons-png.flaticon.com/512/56/56763.png',
             "payload": json.dumps({
                 'option_co': 'main_menu',
             })
