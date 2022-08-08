@@ -178,7 +178,7 @@ class Messenger:
                         "template_type": "generic",
                         "elements": [
                             {
-                                "title": f"{info['title']}",
+                                "title": f"{info['titre']}",
                                 "image_url": f"https://cdn-icons-png.flaticon.com/512/2764/2764545.png",
                                 "info": f"{info['text']}",
 
