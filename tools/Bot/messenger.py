@@ -166,7 +166,7 @@ class Messenger:
         print(r2.content)
     def send_info_fact(self,dest_id):
         listinfofact=info()
-        data1 = {
+        data = {
             "recipient": {
                 "id": f'{dest_id}'
             },
@@ -199,5 +199,5 @@ class Messenger:
             }
         }
         headers = {"Content-Type": "application/json"}
-        r1 = requests.post(self.url, data=json.dumps(data1), headers=headers)
-        print("fait")
+        r = requests.post(self.url, data=json.dumps(data), headers=headers)
+        
