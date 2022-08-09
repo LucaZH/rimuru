@@ -237,9 +237,9 @@ class Messenger:
                         "template_type": "generic",
                         "elements": 
                             {
-                                "title": f'AJKsdhajksdhakjsdh',
-                                "image_url": f"https://cdn-icons-png.flaticon.com/512/2764/2764545.png",
-                                "subtitle": f"slkdfj lksdkfj",
+                                "title": 'AJKsdhajksdhakjsdh',
+                                "image_url": "https://cdn-icons-png.flaticon.com/512/2764/2764545.png",
+                                "subtitle": "slkdfj lksdkfj",
                                 "buttons": 
                                     {
                                         "type": "postback",
