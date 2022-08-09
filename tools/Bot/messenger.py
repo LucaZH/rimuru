@@ -237,11 +237,10 @@ class Messenger:
                         "template_type": "generic",
                         "elements": 
                             {
-                                "title": f'title',
+                                "title": f'AJKsdhajksdhakjsdh',
                                 "image_url": f"https://cdn-icons-png.flaticon.com/512/2764/2764545.png",
-                                "subtitle": f"test",
-
-                                "buttons": [
+                                "subtitle": f"slkdfj lksdkfj",
+                                "buttons": 
                                     {
                                         "type": "postback",
                                         "title": "Regarder",
@@ -249,7 +248,6 @@ class Messenger:
                                             'watch': 'url'
                                         })
                                     }
-                                ]
                             } 
                     },
                     
