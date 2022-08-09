@@ -224,38 +224,38 @@ class Messenger:
     #     headers = {"Content-Type": "application/json"}
     #     r = requests.post(self.url, data=json.dumps(data), headers=headers)
     #     print("arrived")
-def send_info_fact(self,dest_id):
-    data = {
-        "recipient": {
-            "id": f'{dest_id}'
-        },
-        "messaging_type": "response",
-        "message": {
-            "attachment": {
-                "type": "template",
-                "payload": {
-                    "template_type": "generic",
-                    "elements": 
-                        {
-                            "title": f'title',
-                            "image_url": f"https://cdn-icons-png.flaticon.com/512/2764/2764545.png",
-                            "subtitle": f"test",
-
-                            "buttons": [
-                                {
-                                    "type": "postback",
-                                    "title": "Regarder",
-                                    "payload": json.dumps({
-                                        'watch': 'url'
-                                    })
-                                }
-                            ]
-                        } 
-                },
-                
+    def send_info_fact(self,dest_id):
+        data = {
+            "recipient": {
+                "id": f'{dest_id}'
             },
+            "messaging_type": "response",
+            "message": {
+                "attachment": {
+                    "type": "template",
+                    "payload": {
+                        "template_type": "generic",
+                        "elements": 
+                            {
+                                "title": f'title',
+                                "image_url": f"https://cdn-icons-png.flaticon.com/512/2764/2764545.png",
+                                "subtitle": f"test",
+
+                                "buttons": [
+                                    {
+                                        "type": "postback",
+                                        "title": "Regarder",
+                                        "payload": json.dumps({
+                                            'watch': 'url'
+                                        })
+                                    }
+                                ]
+                            } 
+                    },
+                    
+                },
+            }
         }
-    }
-    headers = {"Content-Type": "application/json"}
-    r = requests.post(self.url, data=json.dumps(data), headers=headers)
-    print(r.content)
+        headers = {"Content-Type": "application/json"}
+        r = requests.post(self.url, data=json.dumps(data), headers=headers)
+        print(r.content)
