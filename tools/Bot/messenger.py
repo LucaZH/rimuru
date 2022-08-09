@@ -164,63 +164,98 @@ class Messenger:
         r2 = requests.post(self, data=json.dumps(data2), headers=headers)
         print(r1.content)
         print(r2.content)
-    def send_info_fact(self,dest_id):
-        tittreinfo=["De quoi s’agit-il ?","Quelle est sa fréquence ?","Comment le reconnaître ?","Comment le diagnostic est-il posé ?","Que pouvez-vous faire ?","Que peut faire votre médecin ?"]
-        info1="Le paludisme est une maladie infectieuse causée par le parasite Plasmodium. Ce parasite se transmet à l'homme par la piqûre d’un moustique bien spécifique : l’anophèle."
-        info2 ="Le paludisme est l’une des infections les plus répandues sur la planète. On compte chaque année plus de 200 millions de cas de paludisme et, selon les estimations, la maladie fait plus de 400 000 morts par an, essentiellement parmi les enfants d’Afrique."
-        info3= "La période d'incubation, c’est-à-dire l’intervalle entre la piqûre de moustique et l'apparition des premiers symptômes, varie de 10 jours à 1 mois. Il se peut donc que vous soyez rentré chez vous depuis un moment avant de tomber malade."
-        info4= "Toute personne ayant voyagé dans une région touchée par le paludisme et ayant de la fièvre est suspectée d’être infectée par le paludisme."
-        info5="La principale mesure à prendre est d’empêcher les moustiques de vous piquer. C’est après la tombée de la nuit qu’ils sévissent le plus. Portez des vêtements de couleur claire et recouvrant vos bras et vos jambes (manches longues, pantalons longs ou jupes longues)."
-        info6="Si vous vous rendez dans une région touchée par le paludisme, le médecin vous prescrira un médicament à titre préventif. Il évaluera le médicament qui vous convient le mieux. Il est donc tout à fait possible que vous ne preniez pas le même traitement que vos compagnons de voyage. À partir de 40 kg, la dose pour adultes doit être administrée. Pour un poids inférieur à 40 kg, la dose doit être calculée en fonction du poids."
-        linfo=[info1,info2,info3,info4,info5,info6]
-        listinfofact=[]
-        for i in range(6):
-            listinfofact.append({
-            "titre":tittreinfo[i],
-            "text": linfo[i],
-        })
-        print(listinfofact)
-        data = {
-            "recipient": {
-                "id": f'{dest_id}'
-            },
-            "messaging_type": "response",
-            "message": {
-                "attachment": {
-                    "type": "template",
-                    "payload": {
-                        "template_type": "generic",
-                        "elements": [
-                            {
-                                "title": f"{info['titre']}",
-                                "image_url": "https://cdn-icons-png.flaticon.com/512/2764/2764545.png",
-                                "info": f"{info['text']}",
+    # def send_info_fact(self,dest_id):
+    #     tittreinfo=["De quoi s’agit-il ?","Quelle est sa fréquence ?","Comment le reconnaître ?","Comment le diagnostic est-il posé ?","Que pouvez-vous faire ?","Que peut faire votre médecin ?"]
+    #     info1="Le paludisme est une maladie infectieuse causée par le parasite Plasmodium. Ce parasite se transmet à l'homme par la piqûre d’un moustique bien spécifique : l’anophèle."
+    #     info2 ="Le paludisme est l’une des infections les plus répandues sur la planète. On compte chaque année plus de 200 millions de cas de paludisme et, selon les estimations, la maladie fait plus de 400 000 morts par an, essentiellement parmi les enfants d’Afrique."
+    #     info3= "La période d'incubation, c’est-à-dire l’intervalle entre la piqûre de moustique et l'apparition des premiers symptômes, varie de 10 jours à 1 mois. Il se peut donc que vous soyez rentré chez vous depuis un moment avant de tomber malade."
+    #     info4= "Toute personne ayant voyagé dans une région touchée par le paludisme et ayant de la fièvre est suspectée d’être infectée par le paludisme."
+    #     info5="La principale mesure à prendre est d’empêcher les moustiques de vous piquer. C’est après la tombée de la nuit qu’ils sévissent le plus. Portez des vêtements de couleur claire et recouvrant vos bras et vos jambes (manches longues, pantalons longs ou jupes longues)."
+    #     info6="Si vous vous rendez dans une région touchée par le paludisme, le médecin vous prescrira un médicament à titre préventif. Il évaluera le médicament qui vous convient le mieux. Il est donc tout à fait possible que vous ne preniez pas le même traitement que vos compagnons de voyage. À partir de 40 kg, la dose pour adultes doit être administrée. Pour un poids inférieur à 40 kg, la dose doit être calculée en fonction du poids."
+    #     linfo=[info1,info2,info3,info4,info5,info6]
+    #     listinfofact=[]
+    #     for i in range(6):
+    #         listinfofact.append({
+    #         "titre":tittreinfo[i],
+    #         "text": linfo[i],
+    #     })
+    #     print(listinfofact)
+    #     data = {
+    #         "recipient": {
+    #             "id": f'{dest_id}'
+    #         },
+    #         "messaging_type": "response",
+    #         "message": {
+    #             "attachment": {
+    #                 "type": "template",
+    #                 "payload": {
+    #                     "template_type": "generic",
+    #                     "elements": [
+    #                         {
+    #                             "title": f"{info['titre']}",
+    #                             "image_url": "https://cdn-icons-png.flaticon.com/512/2764/2764545.png",
+    #                             "info": f"{info['text']}",
 
-                                "buttons": [
-                                    {
-                                        "type": "postback",
-                                        "title": "Lire",
-                                        "payload": json.dumps({
-                                            'read': info['text']
-                                        })
-                                    },
-                                ]
-                            } for info in listinfofact
-                        ]
-                    },            
+    #                             "buttons": [
+    #                                 {
+    #                                     "type": "postback",
+    #                                     "title": "Lire",
+    #                                     "payload": json.dumps({
+    #                                         'read': info['text']
+    #                                     })
+    #                                 },
+    #                             ]
+    #                         } for info in listinfofact
+    #                     ]
+    #                 },            
+    #     },
+    #     "quick_replies": [
+    #             {	
+	#                 'content_type': 'text',
+	# 	    		'title': 'Page suivante',
+	# 	    		'payload': json.dumps({
+	# 	    			'page': 'page+1',
+	# 	    			'query': 'query'
+	# 	    			})
+    # 			}
+    #         ]
+    #         },
+    #     }
+    #     headers = {"Content-Type": "application/json"}
+    #     r = requests.post(self.url, data=json.dumps(data), headers=headers)
+    #     print("arrived")
+def send_info_fact(self,dest_id):
+    data = {
+        "recipient": {
+            "id": f'{dest_id}'
         },
-        "quick_replies": [
-                {	
-	                'content_type': 'text',
-		    		'title': 'Page suivante',
-		    		'payload': json.dumps({
-		    			'page': 'page+1',
-		    			'query': 'query'
-		    			})
-    			}
-            ]
+        "messaging_type": "response",
+        "message": {
+            "attachment": {
+                "type": "template",
+                "payload": {
+                    "template_type": "generic",
+                    "elements": 
+                        {
+                            "title": f'title',
+                            "image_url": f"https://cdn-icons-png.flaticon.com/512/2764/2764545.png",
+                            "subtitle": f"test",
+
+                            "buttons": [
+                                {
+                                    "type": "postback",
+                                    "title": "Regarder",
+                                    "payload": json.dumps({
+                                        'watch': 'url'
+                                    })
+                                }
+                            ]
+                        } 
+                },
+                
             },
         }
-        headers = {"Content-Type": "application/json"}
-        r = requests.post(self.url, data=json.dumps(data), headers=headers)
-        print("arrived")
+    }
+    headers = {"Content-Type": "application/json"}
+    r = requests.post(self.url, data=json.dumps(data), headers=headers)
+    print(r.content)
