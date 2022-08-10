@@ -213,7 +213,7 @@ class Messenger:
         headers = {"Content-Type": "application/json"}
         r = requests.post(self.url, data=json.dumps(data), headers=headers)
         print(r.content)
-    def send_res_info_fact(dest_id):
+    def send_res_info_fact(self,dest_id):
         listinfofact=[]
         # print(listinfofact)
         for i in range(len(resultat_info)):
@@ -249,5 +249,5 @@ class Messenger:
     }
         }
         headers = {"Content-Type": "application/json"}
-        r = requests.post(url, data=json.dumps(data), headers=headers)
+        r = requests.post(self.url, data=json.dumps(data), headers=headers)
         print(r.content)
