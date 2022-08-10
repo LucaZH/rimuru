@@ -36,11 +36,11 @@ def main():
                         else:
                             if user_state == 'CM_SC':
                                 api.updateinfo(sender_id,'START',query=query)
-                                Rimuru.send_text(sender_id,f"Votre localisation {query}")
+                                Rimuru.send_text(sender_id,f"Le centre medical dans votre zone est la Clinique Ave Maria Antanambao \n Contact : 0204448998")
                                 Rimuru.send_menu(sender_id,main_menu,f"{message_menu[0]}")
                             if user_state == 'CM_HE':
                                 api.updateinfo(sender_id,'START',query=query)
-                                Rimuru.send_text(sender_id,f"Info ajouter {query}")
+                                Rimuru.send_text(sender_id,f"Envoie du demande d'ajout => {query} aux admin")
                                 Rimuru.send_menu(sender_id,main_menu,f"{message_menu[0]}")
                             if user_state == 'CONSEIL':
                                 Rimuru.send_text(sender_id,api.getrandomconseil())
