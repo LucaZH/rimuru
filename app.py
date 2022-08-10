@@ -46,6 +46,8 @@ def main():
                                 Rimuru.send_text(sender_id,api.getrandomconseil())
                                 Rimuru.send_action(sender_id,'typing_off')
                                 Rimuru.send_menu(sender_id,retry_co,'cliquer sur ces bouton')
+                            if user_state =='INFO':
+                                Rimuru.send_res_info_fact(sender_id)
 
                                 
 
@@ -63,9 +65,12 @@ def main():
                                     # api.updateinfo(sender_id,'CENTREMEDICAL')
                                     Rimuru.send_menu(sender_id,menu_CM,"choix")
                                 elif payload['menu'] =='Actualités':
-                                    Rimuru.send_action(sender_id,"typing_off")
-                                    Rimuru.send_info_fact(sender_id)
-                                    Rimuru.send_menu(sender_id,main_menu,f"{message_menu[0]}'")
+                                    # Rimuru.send_action(sender_id,"typing_off")
+                                    # Rimuru.send_info_fact(sender_id)
+                                    # Rimuru.send_menu(sender_id,main_menu,f"{message_menu[0]}'")
+                                    Rimuru.send_text(sender_id,"Bienvenu dans la rubrique info santé , ici vous pouvez n'importe quelle information concernant la santé")
+                                    Rimuru.send_text(sender_id,"Entrer votre recherche")
+                                    api.updateinfo(sender_id,'INFO')
                                     
                                 elif payload['menu'] =='pharmacie':
                                     Rimuru.send_text(sender_id,'pharmacie : Developpement du projet en cours')
@@ -109,6 +114,8 @@ def main():
                         pload = messaging_event['postback']['payload']
                         if 'get_started' == pload:
                             Rimuru.send_menu(sender_id,main_menu,"Bonjour je suis Rimuru,Qu'est ce que je peux faire pour vous?")
+                        if pload=="Voir":
+                            Rimuru.send_info_fact(sender_id)
                         if is_json(pload):
                             pload_json = json.loads(pload)
                             print(pload_json)

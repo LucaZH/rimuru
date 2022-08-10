@@ -239,7 +239,7 @@ class Messenger:
                                 {
                                     "type":"postback",
                                     "title":"Voir",
-                                    "payload":"DEVELOPER_DEFINED_PAYLOAD"
+                                    "payload":"Voir"
                                 }              
                             ]      
                         }for res_info_fact in listinfofact
