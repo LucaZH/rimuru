@@ -179,7 +179,6 @@ class Messenger:
                 "titre":tittreinfo[i],
                 "text": linfo[i],
             })
-        # print(listinfofact)
 
         data = {
             "recipient": {
@@ -200,7 +199,9 @@ class Messenger:
                                 {
                                     "type":"postback",
                                     "title":"Lire",
-                                    "payload":"DEVELOPER_DEFINED_PAYLOAD"
+                                    "payload":json.dumps({
+                                        'read': info_fact['text']
+                                    })
                                 }              
                             ]      
                         }for info_fact in listinfofact
@@ -211,4 +212,42 @@ class Messenger:
         }
         headers = {"Content-Type": "application/json"}
         r = requests.post(self.url, data=json.dumps(data), headers=headers)
+        print(r.content)
+    def send_res_info_fact(dest_id):
+        listinfofact=[]
+        # print(listinfofact)
+        for i in range(len(resultat_info)):
+                listinfofact.append({
+                    "text": resultat_info[i],
+                })
+        data = {
+            "recipient": {
+                "id": f'{dest_id}'
+            },
+            "messaging_type": "response",
+            "message":{
+            "attachment":{
+            "type":"template",
+            "payload":{
+                    "template_type":"generic",
+                    "elements":[
+                        {
+                            "title":f"Resultats",
+                            "image_url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCDL2AaXe1Jc7dqPmYZp_oXzXk_nyhrz38lw&usqp=CAU",
+                            "subtitle":f"{res_info_fact['text']}",
+                            "buttons":[
+                                {
+                                    "type":"postback",
+                                    "title":"Voir",
+                                    "payload":"DEVELOPER_DEFINED_PAYLOAD"
+                                }              
+                            ]      
+                        }for res_info_fact in listinfofact
+                    ]
+                }
+        }
+    }
+        }
+        headers = {"Content-Type": "application/json"}
+        r = requests.post(url, data=json.dumps(data), headers=headers)
         print(r.content)

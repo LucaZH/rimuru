@@ -107,12 +107,16 @@ def main():
                 elif 'postback' in messaging_event:
                     if 'payload' in messaging_event['postback']:
                         pload = messaging_event['postback']['payload']
-                    if 'get_started' == pload:
-                        Rimuru.send_menu(sender_id,main_menu,"Bonjour je suis Rimuru,Qu'est ce que je peux faire pour vous?")
-                    if is_json(pload):
-                        pload_json = json.loads(pload)
-                        print(pload_json)
-                        
+                        if 'get_started' == pload:
+                            Rimuru.send_menu(sender_id,main_menu,"Bonjour je suis Rimuru,Qu'est ce que je peux faire pour vous?")
+                        if is_json(pload):
+                            pload_json = json.loads(pload)
+                            print(pload_json)
+                            if 'read' in pload_json:
+                                text_info = pload_json['read']
+                                print("arrived")
+                                Rimuru.send_text(sender_id,text_info)
+                            
 
 
     return 'ok'

@@ -90,7 +90,7 @@ message_menu=["Qu'est ce que je peux faire pour vous?","Cliquer sur Rechercher p
 # # print(main_menu[0:len(main_menu)%2])
 # # print(main_menu[len(main_menu)%2:len(main_menu)])
 # print(f"'{message_menu[0]}'")
-
+resultat_info=["Malaria (paludisme)","Fièvre prolongée d’origine inconnue chez l’enfant","Fièvre au retour d’un voyage","Maladies causées par des parasites en dehors de l’intestin","Thalassémie","Prévention des infections en voyage","Déficit auditif et tests auditifs","Croissance normale et croissance anormale chez l’enfant"]
 def get_news():
     listnews = []
     list_result= []
@@ -165,3 +165,43 @@ def send_info_fact(dest_id):
     print(r.content)
 # send_info_fact(userid)
 # print(f"{userid} ")
+# print(len(resultat_info))
+def send_res_info_fact(dest_id):
+    listinfofact=[]
+    # print(listinfofact)
+    for i in range(len(resultat_info)):
+            listinfofact.append({
+                "text": resultat_info[i],
+            })
+    data = {
+        "recipient": {
+            "id": f'{dest_id}'
+        },
+        "messaging_type": "response",
+        "message":{
+        "attachment":{
+        "type":"template",
+        "payload":{
+                "template_type":"generic",
+                "elements":[
+                    {
+                        "title":f"Resultats",
+                        "image_url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCDL2AaXe1Jc7dqPmYZp_oXzXk_nyhrz38lw&usqp=CAU",
+                        "subtitle":f"{res_info_fact['text']}",
+                        "buttons":[
+                            {
+                                "type":"postback",
+                                "title":"Voir",
+                                "payload":"DEVELOPER_DEFINED_PAYLOAD"
+                            }              
+                        ]      
+                    }for res_info_fact in listinfofact
+                ]
+            }
+    }
+  }
+    }
+    headers = {"Content-Type": "application/json"}
+    r = requests.post(url, data=json.dumps(data), headers=headers)
+    print(r.content)
+# send_res_info_fact(userid)
