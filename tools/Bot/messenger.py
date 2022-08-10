@@ -232,7 +232,7 @@ class Messenger:
                     "template_type":"generic",
                     "elements":[
                         {
-                            "title":f"Resultats",
+                            "title":f"Résultats",
                             "image_url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCDL2AaXe1Jc7dqPmYZp_oXzXk_nyhrz38lw&usqp=CAU",
                             "subtitle":f"{res_info_fact['text']}",
                             "buttons":[
