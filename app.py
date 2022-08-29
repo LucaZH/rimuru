@@ -48,12 +48,6 @@ def main():
                                 Rimuru.send_menu(sender_id,retry_co,'cliquer sur ces bouton')
                             if user_state =='INFO':
                                 Rimuru.send_res_info_fact(sender_id)
-
-                                
-
-
-
-
                     if 'quick_reply' in messaging_event['message']:
                         Rimuru.send_action(sender_id,"mark_seen")
                         payload = messaging_event['message']['quick_reply']['payload']
