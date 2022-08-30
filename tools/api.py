@@ -61,7 +61,7 @@ def getrandomconseil():
     randn = random.randrange(1,len(r.json()))
     return getconseil(randn)
 
-def gethopitalbyzone(option,searched):
+def getinfobyzone(option,searched):
     if option not in ['pharmacie','cm']:
         return None
     r = requests.get(f'{url}api/{option}/',headers=headers)
@@ -77,6 +77,18 @@ def gethopitalbyzone(option,searched):
             if key=="verifier" and value==True:
                 resultat_verified.append(resultat[i])
     return resultat_verified
+
+def getinfo(option,query):
+    r= getinfobyzone(option,getzone(query))
+    if r!=[]:
+        for i in range(len(r)):
+            if r[i]["contact"]!="":
+                print(f'{r[i]["nom"]} {r[i]["localisation"]},contact: {r[i]["contact"]}')
+            else:
+                print(f'{r[i]["nom"]} {r[i]["localisation"]}')
+    else:
+        print("No found")
+
 def insertinfo(option,info,publisher_id):
     if option not in ['pharmacie','cm']:
         return None
@@ -119,18 +131,6 @@ def getzone(query):
     except:
         return None
 
-# r= gethopitalbyzone("pharmacie",getzone("Ambal"))
-# if r!=[]:
-#     for i in range(len(r)):
-#         if r[i]["contact"]!="":
-#             print(f'{r[i]["nom"]} {r[i]["localisation"]},contact: {r[i]["contact"]}')
-#         else:
-#             print(f'{r[i]["nom"]} {r[i]["localisation"]}')
-# else:
-#     print("No found")
-
-info="Pharmacie HAJA,Arivonimamo,02222555"
-insertinfo('pharmacie',info,'Admin')
 # insert('pharmacie','Pharmacie','Arivonimamo','','Admin')
 
 # print(getrandomconseil())
