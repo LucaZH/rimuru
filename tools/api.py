@@ -1,3 +1,4 @@
+from cmath import inf
 import requests,json,random,os
 
 # url = os.environ.get('urlpy')
@@ -76,8 +77,32 @@ def gethopitalbyzone(option,searched):
             if key=="verifier" and value==True:
                 resultat_verified.append(resultat[i])
     return resultat_verified
-def inserthopital(name,localisation,contact,published_id):
-    print(os.environ.get('urlpy'))
+def insertinfo(option,info,publisher_id):
+    if option not in ['pharmacie','cm']:
+        return None
+    resultsplit= info.split(',')
+    if len(resultsplit)==3:
+        data= {
+            'nom':resultsplit[0],
+            'localisation':resultsplit[1],
+            'contact':resultsplit[2],
+            'verifier': False,
+            'publier_par':publisher_id,
+            'zone':0
+        }
+    elif len(resultsplit)==2:
+        data= {
+            'nom':resultsplit[0],
+            'localisation':resultsplit[1],
+            'contact':'',
+            'verifier': False,
+            'publier_par':publisher_id,
+            'zone':0
+        }
+
+    r = requests.post(f'{url}api/{option}/',data= json.dumps(data),headers=headers)
+    print(r.content)
+    
 
 import sqlite3
 def getzone(query):
@@ -94,15 +119,19 @@ def getzone(query):
     except:
         return None
 
-r= gethopitalbyzone("pharmacie",getzone("Ambal"))
-if r!=[]:
-    for i in range(len(r)):
-        if r[i]["contact"]!="":
-            print(f'{r[i]["nom"]} {r[i]["localisation"]},contact: {r[i]["contact"]}')
-        else:
-            print(f'{r[i]["nom"]} {r[i]["localisation"]}')
-else:
-    print("No found")
+# r= gethopitalbyzone("pharmacie",getzone("Ambal"))
+# if r!=[]:
+#     for i in range(len(r)):
+#         if r[i]["contact"]!="":
+#             print(f'{r[i]["nom"]} {r[i]["localisation"]},contact: {r[i]["contact"]}')
+#         else:
+#             print(f'{r[i]["nom"]} {r[i]["localisation"]}')
+# else:
+#     print("No found")
+
+info="Pharmacie HAJA,Arivonimamo,02222555"
+insertinfo('pharmacie',info,'Admin')
+# insert('pharmacie','Pharmacie','Arivonimamo','','Admin')
 
 # print(getrandomconseil())
 # print(getconseil(5))
