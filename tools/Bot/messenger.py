@@ -1,6 +1,4 @@
 import json,requests
-from flask import request
-
 from tools.Bot.utils import *
 class Messenger:
     def __init__(self, ACCESS_TOKEN):
