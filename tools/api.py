@@ -1,7 +1,7 @@
 import requests,json,random,os,sqlite3
 
-# url = os.environ.get('urlpy')
-url="http://127.0.0.1:8000/"
+url = os.environ.get('urlpy')
+# url="http://127.0.0.1:8000/"
 headers = {"Content-Type": "application/json"}
 
 def verifyuser(fb_id):
