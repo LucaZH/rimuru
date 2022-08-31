@@ -67,6 +67,29 @@ menu_CM = [
             })
         }
         ]
+menu_PH = [
+        {
+            'content_type': 'text',
+            'title': 'Rechercher',
+            "payload": json.dumps({
+                'query_ph': 'Rechercher',
+            })
+        },
+        {
+            'content_type': 'text',
+            'title': 'Aider',
+            "payload": json.dumps({
+                'query_ph': 'Aider',
+            })
+        },
+        {
+            'content_type': 'text',
+            'title': 'Retour au menu principal',
+            "payload": json.dumps({
+                'query_hosp': 'main_menu',
+            })
+        }
+        ]
 retry_co = [
     {
             'content_type': 'text',

@@ -1,5 +1,4 @@
-from cmath import inf
-import requests,json,random,os
+import requests,json,random,os,sqlite3
 
 # url = os.environ.get('urlpy')
 url="http://127.0.0.1:8000/"
@@ -78,16 +77,7 @@ def getinfobyzone(option,searched):
                 resultat_verified.append(resultat[i])
     return resultat_verified
 
-def getinfo(option,query):
-    r= getinfobyzone(option,getzone(query))
-    if r!=[]:
-        for i in range(len(r)):
-            if r[i]["contact"]!="":
-                print(f'{r[i]["nom"]} {r[i]["localisation"]},contact: {r[i]["contact"]}')
-            else:
-                print(f'{r[i]["nom"]} {r[i]["localisation"]}')
-    else:
-        print("No found")
+
 
 def insertinfo(option,info,publisher_id):
     if option not in ['pharmacie','cm']:
@@ -114,9 +104,7 @@ def insertinfo(option,info,publisher_id):
 
     r = requests.post(f'{url}api/{option}/',data= json.dumps(data),headers=headers)
     print(r.content)
-    
 
-import sqlite3
 def getzone(query):
     try:
         db_path="../mada.db"
