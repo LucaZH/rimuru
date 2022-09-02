@@ -135,3 +135,18 @@ def getzone(query):
 # r = requests.post("https://rimuruadmin.herokuapp.com/api/conseil/",data=json.dumps(conseil),headers=headers)
 # print(f"{r} {r.content}")
 # print(gethopital())
+def getzonejson(searched):
+    with open("tools/fokontany.json","r") as fokontany :
+        data= json.load(fokontany)
+    resultat=[]
+    for i in range(len(data)):
+        for key,value in data[i].items():
+            if value==searched:
+                resultat.append(data[i])
+    if len(resultat)!= 0:
+        for key , value in resultat[0].items():
+            if key=="zone":
+                return value
+    else :
+        return None
+# print(getzonejson("Bemololo"))

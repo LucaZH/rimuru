@@ -1,4 +1,3 @@
-import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
@@ -59,5 +58,3 @@ class ScrapInfoSante():
             FinalResult.append(info)
         
         return FinalResult
-Sc = ScrapInfoSante()
-print(Sc.GetInfoSante("file:///home/luca/Documents/Code/Selenium/Malaria%20(paludisme)%20%C2%B7%20Info%20sant%C3%A9.html"))

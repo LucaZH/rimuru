@@ -1,0 +1,1544 @@
+[
+    {
+        "commune": "Andranomanelatra",
+        "district": "Antsirabe II",
+        "name": "Antanetibe Toavala",
+        "zone": 4
+    },
+    {
+        "commune": "Andranomanelatra",
+        "district": "Antsirabe II",
+        "name": "Ambohimandroso",
+        "zone": 4
+    },
+    {
+        "commune": "Andranomanelatra",
+        "district": "Antsirabe II",
+        "name": "Amberobe",
+        "zone": 4
+    },
+    {
+        "commune": "Andranomanelatra",
+        "district": "Antsirabe II",
+        "name": "Tsaramandroso Gara",
+        "zone": 4
+    },
+    {
+        "commune": "Andranomanelatra",
+        "district": "Antsirabe II",
+        "name": "Tsaramandroso Soamahavoky",
+        "zone": 4
+    },
+    {
+        "commune": "Andranomanelatra",
+        "district": "Antsirabe II",
+        "name": "Fandrindrano Manaovasoa",
+        "zone": 4
+    },
+    {
+        "commune": "Andranomanelatra",
+        "district": "Antsirabe II",
+        "name": "Ambolotsararano",
+        "zone": 4
+    },
+    {
+        "commune": "Andranomanelatra",
+        "district": "Antsirabe II",
+        "name": "Morarano",
+        "zone": 4
+    },
+    {
+        "commune": "Andranomanelatra",
+        "district": "Antsirabe II",
+        "name": "Andranomanelatra",
+        "zone": 4
+    },
+    {
+        "commune": "Andranomanelatra",
+        "district": "Antsirabe II",
+        "name": "Bemololo",
+        "zone": 4
+    },
+    {
+        "commune": "Andranomanelatra",
+        "district": "Antsirabe II",
+        "name": "Tsaravavaka",
+        "zone": 4
+    },
+    {
+        "commune": "Andranomanelatra",
+        "district": "Antsirabe II",
+        "name": "Fiadanana",
+        "zone": 4
+    },
+    {
+        "commune": "Andranomanelatra",
+        "district": "Antsirabe II",
+        "name": "Tsarazazamandimby",
+        "zone": 4
+    },
+    {
+        "commune": "Andranomanelatra",
+        "district": "Antsirabe II",
+        "name": "Anosimboahangy",
+        "zone": 4
+    },
+    {
+        "commune": "Mahazoarivo Avarabohitra",
+        "district": "Antsirabe I",
+        "name": "Avarabohitra",
+        "zone": 2
+    },
+    {
+        "commune": "Mahazoarivo Avarabohitra",
+        "district": "Antsirabe I",
+        "name": "Ambohitsokina",
+        "zone": 2
+    },
+    {
+        "commune": "Mahazoarivo Avarabohitra",
+        "district": "Antsirabe I",
+        "name": "Tsiafahy",
+        "zone": 2
+    },
+    {
+        "commune": "Mahazoarivo Avarabohitra",
+        "district": "Antsirabe I",
+        "name": "Miaramasoandro",
+        "zone": 2
+    },
+    {
+        "commune": "Mahazoarivo Avarabohitra",
+        "district": "Antsirabe I",
+        "name": "Ambohijafy Nord",
+        "zone": 2
+    },
+    {
+        "commune": "Ampatana Mandriankeniheny",
+        "district": "Antsirabe I",
+        "name": "Ambohidava",
+        "zone": 5
+    },
+    {
+        "commune": "Ampatana Mandriankeniheny",
+        "district": "Antsirabe I",
+        "name": "Mandriankeniheny",
+        "zone": 5
+    },
+    {
+        "commune": "Ampatana Mandriankeniheny",
+        "district": "Antsirabe I",
+        "name": "Befaritra",
+        "zone": 5
+    },
+    {
+        "commune": "Ampatana Mandriankeniheny",
+        "district": "Antsirabe I",
+        "name": "Fananana Ambositrakely",
+        "zone": 5
+    },
+    {
+        "commune": "Ampatana Mandriankeniheny",
+        "district": "Antsirabe I",
+        "name": "Ambohitsarabe",
+        "zone": 5
+    },
+    {
+        "commune": "Ampatana Mandriankeniheny",
+        "district": "Antsirabe I",
+        "name": "Ambohidravaka",
+        "zone": 5
+    },
+    {
+        "commune": "Ampatana Mandriankeniheny",
+        "district": "Antsirabe I",
+        "name": "Ambohipeno",
+        "zone": 5
+    },
+    {
+        "commune": "Ampatana Mandriankeniheny",
+        "district": "Antsirabe I",
+        "name": "Bemasoandro Ambalakisoa",
+        "zone": 5
+    },
+    {
+        "commune": "Ampatana Mandriankeniheny",
+        "district": "Antsirabe I",
+        "name": "Ampatana",
+        "zone": 5
+    },
+    {
+        "commune": "Antsenakely Andraikiba",
+        "district": "Antsirabe I",
+        "name": "Andraikiba",
+        "zone": 3
+    },
+    {
+        "commune": "Antsenakely Andraikiba",
+        "district": "Antsirabe I",
+        "name": "Antsenakely",
+        "zone": 3
+    },
+    {
+        "commune": "Antsenakely Andraikiba",
+        "district": "Antsirabe I",
+        "name": "Avaratsena",
+        "zone": 3
+    },
+    {
+        "commune": "Antsenakely Andraikiba",
+        "district": "Antsirabe I",
+        "name": "Amboronomby",
+        "zone": 3
+    },
+    {
+        "commune": "Antsenakely Andraikiba",
+        "district": "Antsirabe I",
+        "name": "Atsimontsena",
+        "zone": 3
+    },
+    {
+        "commune": "Antsenakely Andraikiba",
+        "district": "Antsirabe I",
+        "name": "Antanambao",
+        "zone": 2
+    },
+    {
+        "commune": "Antsenakely Andraikiba",
+        "district": "Antsirabe I",
+        "name": "Ivory",
+        "zone": 3
+    },
+    {
+        "commune": "Antsenakely Andraikiba",
+        "district": "Antsirabe I",
+        "name": "Andrefan'ivohitra",
+        "zone": 3
+    },
+    {
+        "commune": "Antsenakely Andraikiba",
+        "district": "Antsirabe I",
+        "name": "Fiadanana",
+        "zone": 3
+    },
+    {
+        "commune": "Antsenakely Andraikiba",
+        "district": "Antsirabe I",
+        "name": "Andrangy",
+        "zone": 3
+    },
+    {
+        "commune": "Antsirabe Afovoany Atsinanana",
+        "district": "Antsirabe I",
+        "name": "Verezambola",
+        "zone": 5
+    },
+    {
+        "commune": "Antsirabe Afovoany Atsinanana",
+        "district": "Antsirabe I",
+        "name": "Ambalavato 601",
+        "zone": 5
+    },
+    {
+        "commune": "Antsirabe Afovoany Atsinanana",
+        "district": "Antsirabe I",
+        "name": "Tsinjorano",
+        "zone": 5
+    },
+    {
+        "commune": "Antsirabe Afovoany Atsinanana",
+        "district": "Antsirabe I",
+        "name": "Ambohimanga",
+        "zone": 5
+    },
+    {
+        "commune": "Antsirabe Afovoany Atsinanana",
+        "district": "Antsirabe I",
+        "name": "Ambohimanarivo",
+        "zone": 5
+    },
+    {
+        "commune": "Antsirabe Afovoany Atsinanana",
+        "district": "Antsirabe I",
+        "name": "Antsirabe Afovoany Atsinanana",
+        "zone": 5
+    },
+    {
+        "commune": "Antsirabe Afovoany Atsinanana",
+        "district": "Antsirabe I",
+        "name": "Ambohimena Nord",
+        "zone": 5
+    },
+    {
+        "commune": "Antsirabe Afovoany Atsinanana",
+        "district": "Antsirabe I",
+        "name": "Ambohimena Atsimo",
+        "zone": 5
+    },
+    {
+        "commune": "Antsirabe Afovoany Atsinanana",
+        "district": "Antsirabe I",
+        "name": "Antanety",
+        "zone": 5
+    },
+    {
+        "commune": "Antsirabe Afovoany Atsinanana",
+        "district": "Antsirabe I",
+        "name": "Mahazina",
+        "zone": 5
+    },
+    {
+        "commune": "Soamalaza Mahatsinjo",
+        "district": "Antsirabe I",
+        "name": "Soamalaza Tsarasaotra",
+        "zone": 6
+    },
+    {
+        "commune": "Soamalaza Mahatsinjo",
+        "district": "Antsirabe I",
+        "name": "Tomboarivo",
+        "zone": 6
+    },
+    {
+        "commune": "Soamalaza Mahatsinjo",
+        "district": "Antsirabe I",
+        "name": "Ampanataovana",
+        "zone": 6
+    },
+    {
+        "commune": "Soamalaza Mahatsinjo",
+        "district": "Antsirabe I",
+        "name": "Vohitrarivo",
+        "zone": 6
+    },
+    {
+        "commune": "Mahazoarivo Avarabohitra",
+        "district": "Antsirabe I",
+        "name": "Antsanga",
+        "zone": 2
+    },
+    {
+        "commune": "Mahazoarivo Avarabohitra",
+        "district": "Antsirabe I",
+        "name": "Andafiatsimo Star",
+        "zone": 3
+    },
+    {
+        "commune": "Mahazoarivo Avarabohitra",
+        "district": "Antsirabe I",
+        "name": "Tsivatrinikamo",
+        "zone": 2
+    },
+    {
+        "commune": "Mahazoarivo Avarabohitra",
+        "district": "Antsirabe I",
+        "name": "Antsongo",
+        "zone": 2
+    },
+    {
+        "commune": "Mahazoarivo Avarabohitra",
+        "district": "Antsirabe I",
+        "name": "Mahazoarivo Atsimo",
+        "zone": 2
+    },
+    {
+        "commune": "Mahazoarivo Avarabohitra",
+        "district": "Antsirabe I",
+        "name": "Mahazoarivo Avaratra",
+        "zone": 2
+    },
+    {
+        "commune": "Manodidina Ny Gara Ambilombe",
+        "district": "Antsirabe I",
+        "name": "Ambilombe",
+        "zone": 6
+    },
+    {
+        "commune": "Manodidina Ny Gara Ambilombe",
+        "district": "Antsirabe I",
+        "name": "Mahafaly",
+        "zone": 2
+    },
+    {
+        "commune": "Manodidina Ny Gara Ambilombe",
+        "district": "Antsirabe I",
+        "name": "Saharoaloha",
+        "zone": 6
+    },
+    {
+        "commune": "Manodidina Ny Gara Ambilombe",
+        "district": "Antsirabe I",
+        "name": "Fitomilasy Bevokatra",
+        "zone": 6
+    },
+    {
+        "commune": "Manodidina Ny Gara Ambilombe",
+        "district": "Antsirabe I",
+        "name": "Antsirabe Avaratra",
+        "zone": 6
+    },
+    {
+        "commune": "Manodidina Ny Gara Ambilombe",
+        "district": "Antsirabe I",
+        "name": "Manodidina Ny Gara",
+        "zone": 3
+    },
+    {
+        "commune": "Manodidina Ny Gara Ambilombe",
+        "district": "Antsirabe I",
+        "name": "Ambohimanambola",
+        "zone": 6
+    },
+    {
+        "commune": "Soamalaza Mahatsinjo",
+        "district": "Antsirabe I",
+        "name": "Ambalavato Sud",
+        "zone": 6
+    },
+    {
+        "commune": "Soamalaza Mahatsinjo",
+        "district": "Antsirabe I",
+        "name": "Sahatsiho",
+        "zone": 6
+    },
+    {
+        "commune": "Soamalaza Mahatsinjo",
+        "district": "Antsirabe I",
+        "name": "Androvakely",
+        "zone": 6
+    },
+    {
+        "commune": "Soamalaza Mahatsinjo",
+        "district": "Antsirabe I",
+        "name": "Mahatsinjo",
+        "zone": 6
+    },
+    {
+        "commune": "Soamalaza Mahatsinjo",
+        "district": "Antsirabe I",
+        "name": "Marodinta",
+        "zone": 6
+    },
+    {
+        "commune": "Vinaninkarena",
+        "district": "Antsirabe II",
+        "name": "Ampandrotrarana",
+        "zone": null
+    },
+    {
+        "commune": "Vinaninkarena",
+        "district": "Antsirabe II",
+        "name": "Fiakarandava",
+        "zone": null
+    },
+    {
+        "commune": "Sahanivotry Manandona",
+        "district": "Antsirabe II",
+        "name": "Laimbolo",
+        "zone": null
+    },
+    {
+        "commune": "Sahanivotry Manandona",
+        "district": "Antsirabe II",
+        "name": "Ambohimanarivo",
+        "zone": null
+    },
+    {
+        "commune": "Sahanivotry Manandona",
+        "district": "Antsirabe II",
+        "name": "Ambatolahy",
+        "zone": null
+    },
+    {
+        "commune": "Sahanivotry Manandona",
+        "district": "Antsirabe II",
+        "name": "Maromanana",
+        "zone": null
+    },
+    {
+        "commune": "Sahanivotry Manandona",
+        "district": "Antsirabe II",
+        "name": "Sahanivotry Manandona",
+        "zone": null
+    },
+    {
+        "commune": "Sahanivotry Manandona",
+        "district": "Antsirabe II",
+        "name": "Ampamehena",
+        "zone": null
+    },
+    {
+        "commune": "Sahanivotry Manandona",
+        "district": "Antsirabe II",
+        "name": "Farihitsara",
+        "zone": null
+    },
+    {
+        "commune": "Tsarahonenana Sahanivotry",
+        "district": "Antsirabe II",
+        "name": "Sahanivotry",
+        "zone": null
+    },
+    {
+        "commune": "Tsarahonenana Sahanivotry",
+        "district": "Antsirabe II",
+        "name": "Miarintsoa",
+        "zone": null
+    },
+    {
+        "commune": "Soanindrariny",
+        "district": "Antsirabe II",
+        "name": "Antanikatsaka",
+        "zone": null
+    },
+    {
+        "commune": "Soanindrariny",
+        "district": "Antsirabe II",
+        "name": "Antsapanimahazo Fianarana",
+        "zone": null
+    },
+    {
+        "commune": "Soanindrariny",
+        "district": "Antsirabe II",
+        "name": "Tsaramody",
+        "zone": null
+    },
+    {
+        "commune": "Soanindrariny",
+        "district": "Antsirabe II",
+        "name": "Bemasoandro",
+        "zone": null
+    },
+    {
+        "commune": "Soanindrariny",
+        "district": "Antsirabe II",
+        "name": "Ambodiala",
+        "zone": null
+    },
+    {
+        "commune": "Soanindrariny",
+        "district": "Antsirabe II",
+        "name": "Antambiazona",
+        "zone": null
+    },
+    {
+        "commune": "Soanindrariny",
+        "district": "Antsirabe II",
+        "name": "Antanimasaka",
+        "zone": null
+    },
+    {
+        "commune": "Soanindrariny",
+        "district": "Antsirabe II",
+        "name": "Est Tendro",
+        "zone": null
+    },
+    {
+        "commune": "Soanindrariny",
+        "district": "Antsirabe II",
+        "name": "Manarintsoa Sud",
+        "zone": null
+    },
+    {
+        "commune": "Soanindrariny",
+        "district": "Antsirabe II",
+        "name": "Soanindrariny",
+        "zone": null
+    },
+    {
+        "commune": "Soanindrariny",
+        "district": "Antsirabe II",
+        "name": "Soanafindra",
+        "zone": null
+    },
+    {
+        "commune": "Soanindrariny",
+        "district": "Antsirabe II",
+        "name": "Ambatolampy",
+        "zone": null
+    },
+    {
+        "commune": "Soanindrariny",
+        "district": "Antsirabe II",
+        "name": "Fierenantsoa",
+        "zone": null
+    },
+    {
+        "commune": "Tsarahonenana Sahanivotry",
+        "district": "Antsirabe II",
+        "name": "Ampamoabe",
+        "zone": null
+    },
+    {
+        "commune": "Tsarahonenana Sahanivotry",
+        "district": "Antsirabe II",
+        "name": "Morarano",
+        "zone": null
+    },
+    {
+        "commune": "Tsarahonenana Sahanivotry",
+        "district": "Antsirabe II",
+        "name": "Tsarafierana",
+        "zone": null
+    },
+    {
+        "commune": "Tsarahonenana Sahanivotry",
+        "district": "Antsirabe II",
+        "name": "Tsaramirafitra",
+        "zone": null
+    },
+    {
+        "commune": "Tsarahonenana Sahanivotry",
+        "district": "Antsirabe II",
+        "name": "Soavinarivo",
+        "zone": null
+    },
+    {
+        "commune": "Tsarahonenana Sahanivotry",
+        "district": "Antsirabe II",
+        "name": "Belanitra",
+        "zone": null
+    },
+    {
+        "commune": "Tsarahonenana Sahanivotry",
+        "district": "Antsirabe II",
+        "name": "Ambohitsoa",
+        "zone": null
+    },
+    {
+        "commune": "Tsarahonenana Sahanivotry",
+        "district": "Antsirabe II",
+        "name": "Soafianatra",
+        "zone": null
+    },
+    {
+        "commune": "Tsarahonenana Sahanivotry",
+        "district": "Antsirabe II",
+        "name": "Maromandraisoa",
+        "zone": null
+    },
+    {
+        "commune": "Manandona",
+        "district": "Antsirabe II",
+        "name": "Ambatofotsy",
+        "zone": null
+    },
+    {
+        "commune": "Manandona",
+        "district": "Antsirabe II",
+        "name": "Mahasoa",
+        "zone": null
+    },
+    {
+        "commune": "Manandona",
+        "district": "Antsirabe II",
+        "name": "Ranomainty",
+        "zone": null
+    },
+    {
+        "commune": "Manandona",
+        "district": "Antsirabe II",
+        "name": "Maharivo",
+        "zone": null
+    },
+    {
+        "commune": "Manandona",
+        "district": "Antsirabe II",
+        "name": "Zanakambony",
+        "zone": null
+    },
+    {
+        "commune": "Manandona",
+        "district": "Antsirabe II",
+        "name": "Ambohitrimanjato",
+        "zone": null
+    },
+    {
+        "commune": "Manandona",
+        "district": "Antsirabe II",
+        "name": "Ambohipahana Soaray",
+        "zone": null
+    },
+    {
+        "commune": "Manandona",
+        "district": "Antsirabe II",
+        "name": "Ambohiponana",
+        "zone": null
+    },
+    {
+        "commune": "Manandona",
+        "district": "Antsirabe II",
+        "name": "Manandona",
+        "zone": null
+    },
+    {
+        "commune": "Manandona",
+        "district": "Antsirabe II",
+        "name": "Ambohimirary",
+        "zone": null
+    },
+    {
+        "commune": "Manandona",
+        "district": "Antsirabe II",
+        "name": "Fierenantsoa",
+        "zone": null
+    },
+    {
+        "commune": "Mandrosohasina",
+        "district": "Antsirabe II",
+        "name": "Mandrosohasina",
+        "zone": null
+    },
+    {
+        "commune": "Mandrosohasina",
+        "district": "Antsirabe II",
+        "name": "Betampona Mahavokatra",
+        "zone": null
+    },
+    {
+        "commune": "Mandrosohasina",
+        "district": "Antsirabe II",
+        "name": "Kianjanakanga",
+        "zone": null
+    },
+    {
+        "commune": "Mandrosohasina",
+        "district": "Antsirabe II",
+        "name": "Avarabary Fanantenana",
+        "zone": null
+    },
+    {
+        "commune": "Mandrosohasina",
+        "district": "Antsirabe II",
+        "name": "Manjakamiadana Avarabary",
+        "zone": null
+    },
+    {
+        "commune": "Mandrosohasina",
+        "district": "Antsirabe II",
+        "name": "Miarintsoa Soahazo",
+        "zone": null
+    },
+    {
+        "commune": "Mandrosohasina",
+        "district": "Antsirabe II",
+        "name": "Tongasoa Ambanimaso",
+        "zone": null
+    },
+    {
+        "commune": "Mandrosohasina",
+        "district": "Antsirabe II",
+        "name": "Tsarahonenana",
+        "zone": null
+    },
+    {
+        "commune": "Mandrosohasina",
+        "district": "Antsirabe II",
+        "name": "Tsaramody Ambalafeno",
+        "zone": null
+    },
+    {
+        "commune": "Mandrosohasina",
+        "district": "Antsirabe II",
+        "name": "Amparihy",
+        "zone": null
+    },
+    {
+        "commune": "Mangarano",
+        "district": "Antsirabe II",
+        "name": "Anivosaha",
+        "zone": null
+    },
+    {
+        "commune": "Mangarano",
+        "district": "Antsirabe II",
+        "name": "Ankerana",
+        "zone": null
+    },
+    {
+        "commune": "Mangarano",
+        "district": "Antsirabe II",
+        "name": "Mahafaliarivo",
+        "zone": null
+    },
+    {
+        "commune": "Mangarano",
+        "district": "Antsirabe II",
+        "name": "Antanibe",
+        "zone": null
+    },
+    {
+        "commune": "Mangarano",
+        "district": "Antsirabe II",
+        "name": "Ambohijatovo",
+        "zone": null
+    },
+    {
+        "commune": "Mangarano",
+        "district": "Antsirabe II",
+        "name": "Maninarivo",
+        "zone": null
+    },
+    {
+        "commune": "Mangarano",
+        "district": "Antsirabe II",
+        "name": "Ambalamarina",
+        "zone": null
+    },
+    {
+        "commune": "Mangarano",
+        "district": "Antsirabe II",
+        "name": "Mangarano",
+        "zone": null
+    },
+    {
+        "commune": "Mangarano",
+        "district": "Antsirabe II",
+        "name": "Ambohimandroso",
+        "zone": null
+    },
+    {
+        "commune": "Mangarano",
+        "district": "Antsirabe II",
+        "name": "Sahatany",
+        "zone": null
+    },
+    {
+        "commune": "Alakamisy",
+        "district": "Antsirabe II",
+        "name": "Alakamisy",
+        "zone": null
+    },
+    {
+        "commune": "Ambohibary",
+        "district": "Antsirabe II",
+        "name": "Ankeniheny IIi",
+        "zone": null
+    },
+    {
+        "commune": "Ambohibary",
+        "district": "Antsirabe II",
+        "name": "Fanomezantsoa Sambaina Gara",
+        "zone": null
+    },
+    {
+        "commune": "Ambohibary",
+        "district": "Antsirabe II",
+        "name": "Fenomanana Ambohimarina",
+        "zone": null
+    },
+    {
+        "commune": "Ambohibary",
+        "district": "Antsirabe II",
+        "name": "Ambatomainty Fihaonana",
+        "zone": null
+    },
+    {
+        "commune": "Ambohibary",
+        "district": "Antsirabe II",
+        "name": "Madera Ambohimadinika",
+        "zone": null
+    },
+    {
+        "commune": "Ambohibary",
+        "district": "Antsirabe II",
+        "name": "Ambohibary Iray Tsimivaky",
+        "zone": null
+    },
+    {
+        "commune": "Ambohibary",
+        "district": "Antsirabe II",
+        "name": "Sahabe Tetezana",
+        "zone": null
+    },
+    {
+        "commune": "Ambohibary",
+        "district": "Antsirabe II",
+        "name": "Mahatsinjo Miaradia",
+        "zone": null
+    },
+    {
+        "commune": "Alakamisy",
+        "district": "Antsirabe II",
+        "name": "Ambohitromby",
+        "zone": null
+    },
+    {
+        "commune": "Alakamisy",
+        "district": "Antsirabe II",
+        "name": "Soamatamana",
+        "zone": null
+    },
+    {
+        "commune": "Alakamisy",
+        "district": "Antsirabe II",
+        "name": "Tsaratanana",
+        "zone": null
+    },
+    {
+        "commune": "Alakamisy",
+        "district": "Antsirabe II",
+        "name": "Marofangady",
+        "zone": null
+    },
+    {
+        "commune": "Alakamisy",
+        "district": "Antsirabe II",
+        "name": "Mahandraza",
+        "zone": null
+    },
+    {
+        "commune": "Alakamisy",
+        "district": "Antsirabe II",
+        "name": "Andohafarihy",
+        "zone": null
+    },
+    {
+        "commune": "Alatsinainy Ibity",
+        "district": "Antsirabe II",
+        "name": "Apopoha",
+        "zone": null
+    },
+    {
+        "commune": "Alatsinainy Ibity",
+        "district": "Antsirabe II",
+        "name": "Ambalavao",
+        "zone": null
+    },
+    {
+        "commune": "Alatsinainy Ibity",
+        "district": "Antsirabe II",
+        "name": "Mananjara",
+        "zone": null
+    },
+    {
+        "commune": "Alatsinainy Ibity",
+        "district": "Antsirabe II",
+        "name": "Antanetinilapa",
+        "zone": null
+    },
+    {
+        "commune": "Alatsinainy Ibity",
+        "district": "Antsirabe II",
+        "name": "Ambarinakanga",
+        "zone": null
+    },
+    {
+        "commune": "Alatsinainy Ibity",
+        "district": "Antsirabe II",
+        "name": "Ihasy",
+        "zone": null
+    },
+    {
+        "commune": "Alatsinainy Ibity",
+        "district": "Antsirabe II",
+        "name": "Antsira",
+        "zone": null
+    },
+    {
+        "commune": "Alatsinainy Ibity",
+        "district": "Antsirabe II",
+        "name": "Sahamalaza",
+        "zone": null
+    },
+    {
+        "commune": "Ambano",
+        "district": "Antsirabe II",
+        "name": "Antanetibe",
+        "zone": null
+    },
+    {
+        "commune": "Ambano",
+        "district": "Antsirabe II",
+        "name": "Ambohitsaratelo",
+        "zone": null
+    },
+    {
+        "commune": "Ambano",
+        "district": "Antsirabe II",
+        "name": "Antanety Avaratra",
+        "zone": null
+    },
+    {
+        "commune": "Ambano",
+        "district": "Antsirabe II",
+        "name": "Mahazina Atsimo",
+        "zone": null
+    },
+    {
+        "commune": "Ambano",
+        "district": "Antsirabe II",
+        "name": "Manampisoa",
+        "zone": null
+    },
+    {
+        "commune": "Ambano",
+        "district": "Antsirabe II",
+        "name": "Ambano",
+        "zone": null
+    },
+    {
+        "commune": "Ambano",
+        "district": "Antsirabe II",
+        "name": "Andrakodavaka",
+        "zone": null
+    },
+    {
+        "commune": "Ambano",
+        "district": "Antsirabe II",
+        "name": "Tsaramandroso",
+        "zone": null
+    },
+    {
+        "commune": "Ambano",
+        "district": "Antsirabe II",
+        "name": "Amparihindramananiolona",
+        "zone": null
+    },
+    {
+        "commune": "Ambano",
+        "district": "Antsirabe II",
+        "name": "Ankerambe",
+        "zone": null
+    },
+    {
+        "commune": "Ambano",
+        "district": "Antsirabe II",
+        "name": "Tsarafiraisana",
+        "zone": null
+    },
+    {
+        "commune": "Ambano",
+        "district": "Antsirabe II",
+        "name": "Tsarafara",
+        "zone": null
+    },
+    {
+        "commune": "Ambatomena",
+        "district": "Antsirabe II",
+        "name": "Ambolavola",
+        "zone": null
+    },
+    {
+        "commune": "Ambatomena",
+        "district": "Antsirabe II",
+        "name": "Ambodivato",
+        "zone": null
+    },
+    {
+        "commune": "Ambatomena",
+        "district": "Antsirabe II",
+        "name": "Ambatomainty",
+        "zone": null
+    },
+    {
+        "commune": "Ambatomena",
+        "district": "Antsirabe II",
+        "name": "Ampanataovana",
+        "zone": null
+    },
+    {
+        "commune": "Ambatomena",
+        "district": "Antsirabe II",
+        "name": "Fenoarivo I",
+        "zone": null
+    },
+    {
+        "commune": "Ambatomena",
+        "district": "Antsirabe II",
+        "name": "Mahazoarivo",
+        "zone": null
+    },
+    {
+        "commune": "Ambatomena",
+        "district": "Antsirabe II",
+        "name": "Tsarafierana",
+        "zone": null
+    },
+    {
+        "commune": "Ambatomena",
+        "district": "Antsirabe II",
+        "name": "Mitsinjoarivo Betampona",
+        "zone": null
+    },
+    {
+        "commune": "Ambatomena",
+        "district": "Antsirabe II",
+        "name": "Anosy",
+        "zone": null
+    },
+    {
+        "commune": "Ambatomena",
+        "district": "Antsirabe II",
+        "name": "Ambatomena",
+        "zone": null
+    },
+    {
+        "commune": "Ambatomena",
+        "district": "Antsirabe II",
+        "name": "Manarintsoa Est",
+        "zone": null
+    },
+    {
+        "commune": "Ambatomena",
+        "district": "Antsirabe II",
+        "name": "Antsahanarivo",
+        "zone": null
+    },
+    {
+        "commune": "Ambohidranandriana",
+        "district": "Antsirabe II",
+        "name": "Miandrisoa Tsarahonenana",
+        "zone": null
+    },
+    {
+        "commune": "Ambohidranandriana",
+        "district": "Antsirabe II",
+        "name": "Antsahavory",
+        "zone": null
+    },
+    {
+        "commune": "Ambohidranandriana",
+        "district": "Antsirabe II",
+        "name": "Ambohimandroso",
+        "zone": null
+    },
+    {
+        "commune": "Ambohidranandriana",
+        "district": "Antsirabe II",
+        "name": "Ambohimarina",
+        "zone": null
+    },
+    {
+        "commune": "Ambohidranandriana",
+        "district": "Antsirabe II",
+        "name": "Miarinarivo",
+        "zone": null
+    },
+    {
+        "commune": "Ambohidranandriana",
+        "district": "Antsirabe II",
+        "name": "Anosibe",
+        "zone": null
+    },
+    {
+        "commune": "Ambohidranandriana",
+        "district": "Antsirabe II",
+        "name": "Soamonina",
+        "zone": null
+    },
+    {
+        "commune": "Ambohidranandriana",
+        "district": "Antsirabe II",
+        "name": "Tongarivo",
+        "zone": null
+    },
+    {
+        "commune": "Ambohibary",
+        "district": "Antsirabe II",
+        "name": "Ambohitrandriana Miray",
+        "zone": null
+    },
+    {
+        "commune": "Ambohibary",
+        "district": "Antsirabe II",
+        "name": "Inanobe Manerinerina",
+        "zone": null
+    },
+    {
+        "commune": "Ambohibary",
+        "district": "Antsirabe II",
+        "name": "Mandritsara Fiarahamiasa",
+        "zone": null
+    },
+    {
+        "commune": "Ambohibary",
+        "district": "Antsirabe II",
+        "name": "Morodrano Trafonomby",
+        "zone": null
+    },
+    {
+        "commune": "Ambohibary",
+        "district": "Antsirabe II",
+        "name": "Kianjasoa Atsimondapa",
+        "zone": null
+    },
+    {
+        "commune": "Ambohibary",
+        "district": "Antsirabe II",
+        "name": "Ambohimandroso II",
+        "zone": null
+    },
+    {
+        "commune": "Ambohibary",
+        "district": "Antsirabe II",
+        "name": "Andranokely",
+        "zone": null
+    },
+    {
+        "commune": "Ambohibary",
+        "district": "Antsirabe II",
+        "name": "Faravohitra",
+        "zone": null
+    },
+    {
+        "commune": "Ambohibary",
+        "district": "Antsirabe II",
+        "name": "Tsarafiraisana Morarano IIi",
+        "zone": null
+    },
+    {
+        "commune": "Ambohibary",
+        "district": "Antsirabe II",
+        "name": "Tsarazazamandimby",
+        "zone": null
+    },
+    {
+        "commune": "Ambohibary",
+        "district": "Antsirabe II",
+        "name": "Antsofombato Telomiray",
+        "zone": null
+    },
+    {
+        "commune": "Ambohidranandriana",
+        "district": "Antsirabe II",
+        "name": "Tsaramody",
+        "zone": null
+    },
+    {
+        "commune": "Ambohidranandriana",
+        "district": "Antsirabe II",
+        "name": "Fanjakamandroso",
+        "zone": null
+    },
+    {
+        "commune": "Ambohimiarivo",
+        "district": "Antsirabe II",
+        "name": "Soanierana",
+        "zone": null
+    },
+    {
+        "commune": "Ambohimiarivo",
+        "district": "Antsirabe II",
+        "name": "Ambohikambana",
+        "zone": null
+    },
+    {
+        "commune": "Ambohimiarivo",
+        "district": "Antsirabe II",
+        "name": "Ambatolahimarina",
+        "zone": null
+    },
+    {
+        "commune": "Ambohimiarivo",
+        "district": "Antsirabe II",
+        "name": "Tsaramandroso",
+        "zone": null
+    },
+    {
+        "commune": "Ambohimiarivo",
+        "district": "Antsirabe II",
+        "name": "Antanambao",
+        "zone": null
+    },
+    {
+        "commune": "Ambohimiarivo",
+        "district": "Antsirabe II",
+        "name": "Ambohimasy",
+        "zone": null
+    },
+    {
+        "commune": "Ambohimiarivo",
+        "district": "Antsirabe II",
+        "name": "Betsiholany",
+        "zone": null
+    },
+    {
+        "commune": "Ambohitsimanova",
+        "district": "Antsirabe II",
+        "name": "Antsongombato",
+        "zone": null
+    },
+    {
+        "commune": "Ambohitsimanova",
+        "district": "Antsirabe II",
+        "name": "Soamanandrariny",
+        "zone": null
+    },
+    {
+        "commune": "Ambohitsimanova",
+        "district": "Antsirabe II",
+        "name": "Fenoarivo",
+        "zone": null
+    },
+    {
+        "commune": "Ambohitsimanova",
+        "district": "Antsirabe II",
+        "name": "Ambohibohangy",
+        "zone": null
+    },
+    {
+        "commune": "Ambohitsimanova",
+        "district": "Antsirabe II",
+        "name": "Soavina",
+        "zone": null
+    },
+    {
+        "commune": "Ambohitsimanova",
+        "district": "Antsirabe II",
+        "name": "Miadanimerina",
+        "zone": null
+    },
+    {
+        "commune": "Ambohitsimanova",
+        "district": "Antsirabe II",
+        "name": "Ambohitsimanova",
+        "zone": null
+    },
+    {
+        "commune": "Ambohitsimanova",
+        "district": "Antsirabe II",
+        "name": "Maronony",
+        "zone": null
+    },
+    {
+        "commune": "Ambohitsimanova",
+        "district": "Antsirabe II",
+        "name": "Antanamalaza",
+        "zone": null
+    },
+    {
+        "commune": "Ambohitsimanova",
+        "district": "Antsirabe II",
+        "name": "Avarabohitra",
+        "zone": null
+    },
+    {
+        "commune": "Antanambao",
+        "district": "Antsirabe II",
+        "name": "Indroamita",
+        "zone": 1
+    },
+    {
+        "commune": "Antanambao",
+        "district": "Antsirabe II",
+        "name": "Ambalarano",
+        "zone": 1
+    },
+    {
+        "commune": "Antanambao",
+        "district": "Antsirabe II",
+        "name": "Soamiakatra",
+        "zone": 1
+    },
+    {
+        "commune": "Antanambao",
+        "district": "Antsirabe II",
+        "name": "Iharandramosa",
+        "zone": 1
+    },
+    {
+        "commune": "Antanambao",
+        "district": "Antsirabe II",
+        "name": "Mahatsinjo",
+        "zone": 1
+    },
+    {
+        "commune": "Antanambao",
+        "district": "Antsirabe II",
+        "name": "Fenoarivo II",
+        "zone": 1
+    },
+    {
+        "commune": "Antanambao",
+        "district": "Antsirabe II",
+        "name": "Tsarasaotra",
+        "zone": 1
+    },
+    {
+        "commune": "Antanambao",
+        "district": "Antsirabe II",
+        "name": "Merimandroso",
+        "zone": 1
+    },
+    {
+        "commune": "Antanambao",
+        "district": "Antsirabe II",
+        "name": "Soanierana",
+        "zone": 1
+    },
+    {
+        "commune": "Antanambao",
+        "district": "Antsirabe II",
+        "name": "Ambohimandroso",
+        "zone": 1
+    },
+    {
+        "commune": "Antanambao",
+        "district": "Antsirabe II",
+        "name": "Ambatomanga",
+        "zone": 1
+    },
+    {
+        "commune": "Antanambao",
+        "district": "Antsirabe II",
+        "name": "Menatratra",
+        "zone": 1
+    },
+    {
+        "commune": "Antanambao",
+        "district": "Antsirabe II",
+        "name": "Soanakambana",
+        "zone": 1
+    },
+    {
+        "commune": "Antanambao",
+        "district": "Antsirabe II",
+        "name": "Ambatobe Fisahanana",
+        "zone": 1
+    },
+    {
+        "commune": "Antanambao",
+        "district": "Antsirabe II",
+        "name": "Soamiampita",
+        "zone": 1
+    },
+    {
+        "commune": "Antanambao",
+        "district": "Antsirabe II",
+        "name": "Soavimbahoaka",
+        "zone": 1
+    },
+    {
+        "commune": "Antanimandry",
+        "district": "Antsirabe II",
+        "name": "Andrianana",
+        "zone": null
+    },
+    {
+        "commune": "Antanimandry",
+        "district": "Antsirabe II",
+        "name": "Masinandraina",
+        "zone": null
+    },
+    {
+        "commune": "Antanimandry",
+        "district": "Antsirabe II",
+        "name": "Masiniloharano",
+        "zone": null
+    },
+    {
+        "commune": "Antanimandry",
+        "district": "Antsirabe II",
+        "name": "Avaradrano",
+        "zone": null
+    },
+    {
+        "commune": "Antanimandry",
+        "district": "Antsirabe II",
+        "name": "Ampahadiminy",
+        "zone": null
+    },
+    {
+        "commune": "Antanimandry",
+        "district": "Antsirabe II",
+        "name": "Antanimandry",
+        "zone": null
+    },
+    {
+        "commune": "Antanimandry",
+        "district": "Antsirabe II",
+        "name": "Ambohidrano",
+        "zone": null
+    },
+    {
+        "commune": "Antanimandry",
+        "district": "Antsirabe II",
+        "name": "Antsongobe Nord",
+        "zone": null
+    },
+    {
+        "commune": "Antsoatany",
+        "district": "Antsirabe II",
+        "name": "Antsampanimahazo",
+        "zone": null
+    },
+    {
+        "commune": "Antsoatany",
+        "district": "Antsirabe II",
+        "name": "Mandritsarakely",
+        "zone": null
+    },
+    {
+        "commune": "Antsoatany",
+        "district": "Antsirabe II",
+        "name": "Ambohimena",
+        "zone": null
+    },
+    {
+        "commune": "Antsoatany",
+        "district": "Antsirabe II",
+        "name": "Antsoatany",
+        "zone": null
+    },
+    {
+        "commune": "Antsoatany",
+        "district": "Antsirabe II",
+        "name": "Ambalavao",
+        "zone": null
+    },
+    {
+        "commune": "Belazao",
+        "district": "Antsirabe II",
+        "name": "Miadakofeno",
+        "zone": 3
+    },
+    {
+        "commune": "Belazao",
+        "district": "Antsirabe II",
+        "name": "Tsarahasina",
+        "zone": 3
+    },
+    {
+        "commune": "Belazao",
+        "district": "Antsirabe II",
+        "name": "Amboniavaratra Sud",
+        "zone": 3
+    },
+    {
+        "commune": "Belazao",
+        "district": "Antsirabe II",
+        "name": "Belazao",
+        "zone": 3
+    },
+    {
+        "commune": "Belazao",
+        "district": "Antsirabe II",
+        "name": "Anjanamiakatra",
+        "zone": 3
+    },
+    {
+        "commune": "Belazao",
+        "district": "Antsirabe II",
+        "name": "Andranonandriana",
+        "zone": 3
+    },
+    {
+        "commune": "Belazao",
+        "district": "Antsirabe II",
+        "name": "Ambohinapetraka",
+        "zone": 3
+    },
+    {
+        "commune": "Mahazoarivo Avarabohitra",
+        "district": "Antsirabe I",
+        "name": "Vatofotsy",
+        "zone": 2
+    },
+    {
+        "commune": "Antsenakely Andraikiba",
+        "district": "Antsirabe I",
+        "name": "Sabotsy",
+        "zone": 3
+    }
+]

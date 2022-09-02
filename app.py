@@ -135,7 +135,7 @@ def main():
 Rimuru.get_stared()
 
 def getinfo(option,query,recipient_id):
-    r= api.getinfobyzone(option,api.getzone(query))
+    r= api.getinfobyzone(option,api.getzonejson(query))
     if r!=[]:
         for i in range(len(r)):
             if r[i]["contact"]!="":
