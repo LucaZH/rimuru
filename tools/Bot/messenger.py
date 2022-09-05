@@ -79,17 +79,7 @@ class Messenger:
         r = requests.post('https://graph.facebook.com/v14.0/me/messenger_profile?access_token=' + self.ACCESS_TOKEN, data=json.dumps(data), headers=headers)
     def send_info(self,dest_id,URLSANTE):
         scrap = ScrapInfoSante()
-        tittreinfo=["De quoi s’agit-il ?","Quelle est sa fréquence ?","Comment le reconnaître ?","Comment le diagnostic est-il posé ?","Que pouvez-vous faire ?","Que peut faire votre médecin ?"]
-        listinfofact=[]
-        linfo=scrap.GetInfoSante(URLSANTE)
-        print(len(linfo))
-        print(linfo)
-        for i in range(len(linfo)):
-            listinfofact.append({
-                "titre":tittreinfo[i],
-                "text": linfo[i],
-            })
-        print(listinfofact)
+        listinfo=scrap.GetInfoSante(URLSANTE)
         data = {
             "recipient": {
                 "id": f'{dest_id}'
@@ -114,7 +104,7 @@ class Messenger:
                                     })
                                 }              
                             ]      
-                        }for info_fact in listinfofact
+                        }for info_fact in listinfo
                     ]
                 }
         }

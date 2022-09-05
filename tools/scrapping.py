@@ -51,7 +51,7 @@ class ScrapInfoSante():
             OriginList.append(GetpText)
         self.driver.close()
         FirstSplit= OriginList[0].split("\n")
-        question = ["De quoi s’agit-il ?","Quelle est sa fréquence ?","Comment le reconnaître ?","Comment le diagnostic est-il posé ?","Que pouvez-vous faire ?","Que peut faire votre médecin?","En savoir plus ?"]
+        question = ["De quoi s’agit-il ?","Quelle est sa fréquence ?","Comment le reconnaître ?","Comment le diagnostic est-il posé ?","Que pouvez-vous faire ?","Que peut faire votre médecin?","En savoir plus ?","Qui est dépisté ?","Comment le reconnaître ?2"]
         NewQuestion=[]
         for i in range(len(FirstSplit)-1):
             if FirstSplit[i] in question:
