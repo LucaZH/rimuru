@@ -4,7 +4,7 @@ from tools.scrapping import *
 class Messenger:
     def __init__(self, ACCESS_TOKEN):
         self.ACCESS_TOKEN = ACCESS_TOKEN
-        self.url = "https://graph.facebook.com/v13.0/me/messages?access_token=" + ACCESS_TOKEN
+        self.url = "https://graph.facebook.com/v14.0/me/messages?access_token=" + ACCESS_TOKEN
     def send_text(self,dest_id, text):
         self.send_action(dest_id,"typing_on")
         data = {
@@ -76,9 +76,8 @@ class Messenger:
             }
 
         headers = {"Content-Type": "application/json"}
-        r = requests.post('https://graph.facebook.com/v10.0/me/messenger_profile?access_token=' + self.ACCESS_TOKEN, data=json.dumps(data), headers=headers)
-    def get_username(self,user_id):
-        name = requests.get('https://graph.facebook.com/v2.6/' + user_id +'?access_token=' + self.ACCESS_TOKEN)
+        r = requests.post('https://graph.facebook.com/v14.0/me/messenger_profile?access_token=' + self.ACCESS_TOKEN, data=json.dumps(data), headers=headers)
+
     def send_news_suggestion(self,dest_id):
         list_news = get_news()
         if len(list_news)>=12:
