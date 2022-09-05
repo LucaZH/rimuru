@@ -134,13 +134,13 @@ def getzonejson(searched):
     else :
         return None
 # print(getzonejson("Bemololo"))
-userid = '5123960687658557'
+userid = '8546564265369512'
 ACCESS_TOKEN='EAAGfZAFN8lA4BAL3EHkJF7Fep3sSH7pwTCLuADvYrg64lTBRzjIEyC3XOExu5PvGAtnGrwhzLfvjdxDLdan7BKI8XcxypsoSJcEiuB4TVIstTC8NyuQUQjZBdGZBjMjQU6dSvybqcnPUPgxsZAxVjpAgK0k9ZCj7UDbsSY7oCwyyMlDQdxYAyM4dA3CDYoMsZD'
-url = 'https://graph.facebook.com/v14.0/me/messages?access_token='+ACCESS_TOKEN
+url = 'https://graph.facebook.com/v13.0/me/messages?access_token='+ACCESS_TOKEN
 # "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCDL2AaXe1Jc7dqPmYZp_oXzXk_nyhrz38lw&usqp=CAU"
 scrap = scrapping.ScrapInfoSante()
 def send_res_info(dest_id):
-    listinfofact=scrap.Get_result_search("Maux de tête")[:10]
+    listinfofact=scrap.Get_result_search("Ventre")[:10]
     # listinfofact=[]
     # print(listinfofact)
     data = {
@@ -175,5 +175,5 @@ def send_res_info(dest_id):
     r = requests.post(url, data=json.dumps(data), headers=headers)
     print(r.content)
 # send_res_info(userid)
-listinfofact=scrap.Get_result_search("Maux de tête")
+# listinfofact=scrap.Get_result_search("Maux de tête")
     # print(res)

@@ -1,13 +1,45 @@
 import json,requests
 from tools.Bot.utils import *
+from tools.scrapping import ScrapInfoSante
 class Messenger:
     def __init__(self, ACCESS_TOKEN):
         self.ACCESS_TOKEN = ACCESS_TOKEN
         self.url = "https://graph.facebook.com/v13.0/me/messages?access_token=" + ACCESS_TOKEN
-        
-
-    
-            
+    def send_res_info(self,dest_id):
+        listinfofact=ScrapInfoSante.Get_result_search("Ventre")[:10]
+        # listinfofact=[]
+        # print(listinfofact)
+        data = {
+            "recipient": {
+                "id": f'{dest_id}'
+            },
+            "messaging_type": "response",
+            "message":{
+            "attachment":{
+            "type":"template",
+            "payload":{
+                    "template_type":"generic",
+                    "elements":[
+                        {
+                            "title":f"{res_info['titre']}",
+                            "image_url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCDL2AaXe1Jc7dqPmYZp_oXzXk_nyhrz38lw&usqp=CAU",
+                            "subtitle":f"{res_info['url']}",
+                            "buttons":[
+                                {
+                                    "type":"postback",
+                                    "title":"Voir",
+                                    "payload":"DEVELOPER_DEFINED_PAYLOAD"
+                                }              
+                            ]      
+                        }for res_info in listinfofact
+                    ]
+                }
+        }
+    }
+        }
+        headers = {"Content-Type": "application/json"}
+        r = requests.post(self.url, data=json.dumps(data), headers=headers)
+        print(r.content)            
     def send_text(self,dest_id, text):
         self.send_action(dest_id,"typing_on")
         data = {
