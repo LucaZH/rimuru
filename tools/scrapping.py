@@ -62,7 +62,8 @@ class ScrapInfoSante():
         FinalResult=[]
         for x in range (len(Splited)-1):
             info = {
-                NewQuestion[x]:Splited[x+1],
+                'titre':NewQuestion[x],
+                'text':Splited[x+1],
             }
             FinalResult.append(info)
         
