@@ -134,9 +134,9 @@ def get_news():
 #         "text": linfo[i],
 #     })
 #     return listeinfo
-userid = '5158134077575785'
+userid = '8546564265369512'
 ACCESS_TOKEN='EAAGfZAFN8lA4BAL3EHkJF7Fep3sSH7pwTCLuADvYrg64lTBRzjIEyC3XOExu5PvGAtnGrwhzLfvjdxDLdan7BKI8XcxypsoSJcEiuB4TVIstTC8NyuQUQjZBdGZBjMjQU6dSvybqcnPUPgxsZAxVjpAgK0k9ZCj7UDbsSY7oCwyyMlDQdxYAyM4dA3CDYoMsZD'
-url = 'https://graph.facebook.com/v13.0/me/messages?access_token='+ACCESS_TOKEN
+url = 'https://graph.facebook.com/v14.0/me/messages?access_token='+ACCESS_TOKEN
 # url = 'https://graph.facebook.com/v2.6/me/messages?access_token='+ACCESS_TOKEN
 def send_info_fact(dest_id):
     tittreinfo=["De quoi s’agit-il ?","Quelle est sa fréquence ?","Comment le reconnaître ?","Comment le diagnostic est-il posé ?","Que pouvez-vous faire ?","Que peut faire votre médecin ?"]

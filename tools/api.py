@@ -1,4 +1,4 @@
-import requests,json,random,os,sqlite3
+import requests,json,random,os,sqlite3,scrapgoogleimage,scrapping
 
 url = os.environ.get('urlpy')
 # url="http://127.0.0.1:8000/"
@@ -119,22 +119,6 @@ def getzone(query):
     except:
         return None
 
-# insert('pharmacie','Pharmacie','Arivonimamo','','Admin')
-
-# print(getrandomconseil())
-# print(getconseil(5))
-# print(getuserinfo("123","all"))
-# updateinfo('123','HOPITAL','')
-# insertuser("12345678")
-# verifyuser("2342344")
-# r = requests.get(f'{url}api/user/', headers=headers)
-# print(r.json())
-# conseil = {
-#     "text": "Evite les choses trop sucree"
-# }
-# r = requests.post("https://rimuruadmin.herokuapp.com/api/conseil/",data=json.dumps(conseil),headers=headers)
-# print(f"{r} {r.content}")
-# print(gethopital())
 def getzonejson(searched):
     with open("tools/fokontany.json","r") as fokontany :
         data= json.load(fokontany)
@@ -150,3 +134,46 @@ def getzonejson(searched):
     else :
         return None
 # print(getzonejson("Bemololo"))
+userid = '5123960687658557'
+ACCESS_TOKEN='EAAGfZAFN8lA4BAL3EHkJF7Fep3sSH7pwTCLuADvYrg64lTBRzjIEyC3XOExu5PvGAtnGrwhzLfvjdxDLdan7BKI8XcxypsoSJcEiuB4TVIstTC8NyuQUQjZBdGZBjMjQU6dSvybqcnPUPgxsZAxVjpAgK0k9ZCj7UDbsSY7oCwyyMlDQdxYAyM4dA3CDYoMsZD'
+url = 'https://graph.facebook.com/v14.0/me/messages?access_token='+ACCESS_TOKEN
+# "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCDL2AaXe1Jc7dqPmYZp_oXzXk_nyhrz38lw&usqp=CAU"
+scrap = scrapping.ScrapInfoSante()
+def send_res_info(dest_id):
+    listinfofact=scrap.Get_result_search("Maux de tête")[:10]
+    # listinfofact=[]
+    # print(listinfofact)
+    data = {
+        "recipient": {
+            "id": f'{dest_id}'
+        },
+        "messaging_type": "response",
+        "message":{
+        "attachment":{
+        "type":"template",
+        "payload":{
+                "template_type":"generic",
+                "elements":[
+                    {
+                        "title":f"{res_info['titre']}",
+                        "image_url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCDL2AaXe1Jc7dqPmYZp_oXzXk_nyhrz38lw&usqp=CAU",
+                        "subtitle":f"{res_info['url']}",
+                        "buttons":[
+                            {
+                                "type":"postback",
+                                "title":"Voir",
+                                "payload":"DEVELOPER_DEFINED_PAYLOAD"
+                            }              
+                        ]      
+                    }for res_info in listinfofact
+                ]
+            }
+    }
+  }
+    }
+    headers = {"Content-Type": "application/json"}
+    r = requests.post(url, data=json.dumps(data), headers=headers)
+    print(r.content)
+# send_res_info(userid)
+listinfofact=scrap.Get_result_search("Maux de tête")
+    # print(res)

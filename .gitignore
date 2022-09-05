@@ -1,2 +1,4 @@
 .env
 env/*
+tools/scrapgoogleimage.py
+tools/__pycache__/
