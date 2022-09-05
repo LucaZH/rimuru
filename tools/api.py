@@ -1,4 +1,4 @@
-import requests,json,random,os,sqlite3,scrapgoogleimage,scrapping
+import requests,json,random,os,sqlite3,scrapping
 
 url = os.environ.get('urlpy')
 # url="http://127.0.0.1:8000/"
