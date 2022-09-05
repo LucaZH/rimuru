@@ -82,12 +82,14 @@ class Messenger:
         tittreinfo=["De quoi s’agit-il ?","Quelle est sa fréquence ?","Comment le reconnaître ?","Comment le diagnostic est-il posé ?","Que pouvez-vous faire ?","Que peut faire votre médecin ?"]
         listinfofact=[]
         linfo=scrap.GetInfoSante(URLSANTE)
+        print(len(linfo))
+        print(linfo)
         for i in range(len(linfo)):
             listinfofact.append({
                 "titre":tittreinfo[i],
                 "text": linfo[i],
             })
-
+        print(listinfofact)
         data = {
             "recipient": {
                 "id": f'{dest_id}'
