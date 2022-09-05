@@ -4,7 +4,7 @@ from tools.scrapping import *
 class Messenger:
     def __init__(self, ACCESS_TOKEN):
         self.ACCESS_TOKEN = ACCESS_TOKEN
-        self.url = "https://graph.facebook.com/v14.0/me/messages?access_token=" + ACCESS_TOKEN
+        self.url = f"https://graph.facebook.com/v14.0/me/messages?access_token={ACCESS_TOKEN}"
     def send_text(self,dest_id, text):
         self.send_action(dest_id,"typing_on")
         data = {

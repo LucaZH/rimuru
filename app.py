@@ -7,8 +7,9 @@ from tools.Bot.utils import *
 app = Flask(__name__)
 ACCESS_TOKEN = os.environ.get("ACCESS_TOKEN")
 VERIFY_TOKEN = os.environ.get("VERIFY_TOKEN")
-Rimuru = Messenger(ACCESS_TOKEN)
 
+Rimuru = Messenger(ACCESS_TOKEN)
+print(ACCESS_TOKEN)
 @app.route("/", methods=['GET'])
 def handle_verification():
         if (request.args.get('hub.verify_token', '') == VERIFY_TOKEN):
