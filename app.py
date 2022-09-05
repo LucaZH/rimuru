@@ -140,7 +140,7 @@ def main():
                         elif is_json(pload):
                             pload_json = json.loads(pload)
                             print(pload_json)
-                            if 'voir' in payload:
+                            if 'voir' in pload_json:
                                 info_Url = pload_json['voir']
                                 print("arrived")
                                 print(info_Url)
