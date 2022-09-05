@@ -1,4 +1,4 @@
-import requests,json,random,os,sqlite3,scrapping
+import requests,json,random,os,sqlite3
 
 url = os.environ.get('urlpy')
 # url="http://127.0.0.1:8000/"
@@ -138,42 +138,42 @@ userid = '8546564265369512'
 ACCESS_TOKEN='EAAGfZAFN8lA4BAL3EHkJF7Fep3sSH7pwTCLuADvYrg64lTBRzjIEyC3XOExu5PvGAtnGrwhzLfvjdxDLdan7BKI8XcxypsoSJcEiuB4TVIstTC8NyuQUQjZBdGZBjMjQU6dSvybqcnPUPgxsZAxVjpAgK0k9ZCj7UDbsSY7oCwyyMlDQdxYAyM4dA3CDYoMsZD'
 url = 'https://graph.facebook.com/v13.0/me/messages?access_token='+ACCESS_TOKEN
 # "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCDL2AaXe1Jc7dqPmYZp_oXzXk_nyhrz38lw&usqp=CAU"
-scrap = scrapping.ScrapInfoSante()
-def send_res_info(dest_id):
-    listinfofact=scrap.Get_result_search("Ventre")[:10]
-    # listinfofact=[]
-    # print(listinfofact)
-    data = {
-        "recipient": {
-            "id": f'{dest_id}'
-        },
-        "messaging_type": "response",
-        "message":{
-        "attachment":{
-        "type":"template",
-        "payload":{
-                "template_type":"generic",
-                "elements":[
-                    {
-                        "title":f"{res_info['titre']}",
-                        "image_url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCDL2AaXe1Jc7dqPmYZp_oXzXk_nyhrz38lw&usqp=CAU",
-                        "subtitle":f"{res_info['url']}",
-                        "buttons":[
-                            {
-                                "type":"postback",
-                                "title":"Voir",
-                                "payload":"DEVELOPER_DEFINED_PAYLOAD"
-                            }              
-                        ]      
-                    }for res_info in listinfofact
-                ]
-            }
-    }
-  }
-    }
-    headers = {"Content-Type": "application/json"}
-    r = requests.post(url, data=json.dumps(data), headers=headers)
-    print(r.content)
-# send_res_info(userid)
-# listinfofact=scrap.Get_result_search("Maux de tête")
-    # print(res)
+# scrap = scrapping.ScrapInfoSante()
+# def send_res_info(dest_id):
+#     listinfofact=scrap.Get_result_search("Ventre")[:10]
+#     # listinfofact=[]
+#     # print(listinfofact)
+#     data = {
+#         "recipient": {
+#             "id": f'{dest_id}'
+#         },
+#         "messaging_type": "response",
+#         "message":{
+#         "attachment":{
+#         "type":"template",
+#         "payload":{
+#                 "template_type":"generic",
+#                 "elements":[
+#                     {
+#                         "title":f"{res_info['titre']}",
+#                         "image_url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCDL2AaXe1Jc7dqPmYZp_oXzXk_nyhrz38lw&usqp=CAU",
+#                         "subtitle":f"{res_info['url']}",
+#                         "buttons":[
+#                             {
+#                                 "type":"postback",
+#                                 "title":"Voir",
+#                                 "payload":"DEVELOPER_DEFINED_PAYLOAD"
+#                             }              
+#                         ]      
+#                     }for res_info in listinfofact
+#                 ]
+#             }
+#     }
+#   }
+#     }
+#     headers = {"Content-Type": "application/json"}
+#     r = requests.post(url, data=json.dumps(data), headers=headers)
+#     print(r.content)
+# # send_res_info(userid)
+# # listinfofact=scrap.Get_result_search("Maux de tête")
+#     # print(res)
