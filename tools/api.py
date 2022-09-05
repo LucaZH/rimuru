@@ -37,7 +37,7 @@ def getuserinfo(fb_id,info):
                 return value
 # r = requests.get(f'{url}api/user/TESTVERIFYUSER', headers=headers)
 # print(r)
-# getuserinfo("TESTVERIFYUSER","state")
+# print(getuserinfo("8546564265369512","state"))
 def updateinfo(fb_id,state,query=""):
     data = {
     "fb_id": fb_id,
@@ -58,7 +58,7 @@ def insertuser(fb_id, state='START'):
     r = requests.post(f'{url}api/user/', data= json.dumps(data),headers=headers)
     print(r.content)
     print(f"user {fb_id} insered")
-# insertuser("Luca")
+# insertuser("8546564265369512")
 def getconseil(id):
     r = requests.get(f'{url}api/conseil/{id}',headers=headers)
     cons = r.json()
