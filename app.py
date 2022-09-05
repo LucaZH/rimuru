@@ -57,7 +57,9 @@ def main():
                             #     Rimuru.send_action(recipient_id,'typing_off')
                             #     Rimuru.send_menu(recipient_id,retry_co,'cliquer sur ces bouton')
                             if user_state =='INFO':
-                                Rimuru.send_res_info_fact(recipient_id)
+                                api.updateinfo(recipient_id,'START',query=query)
+                                Rimuru.send_res_info(recipient_id,query)
+                                Rimuru.send_menu(recipient_id,main_menu,f"{message_menu[0]}")
                     if 'quick_reply' in messaging_event['message']:
                         Rimuru.send_action(recipient_id,"mark_seen")
                         payload = messaging_event['message']['quick_reply']['payload']

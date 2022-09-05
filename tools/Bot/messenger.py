@@ -5,8 +5,8 @@ class Messenger:
     def __init__(self, ACCESS_TOKEN):
         self.ACCESS_TOKEN = ACCESS_TOKEN
         self.url = "https://graph.facebook.com/v13.0/me/messages?access_token=" + ACCESS_TOKEN
-    def send_res_info(self,dest_id):
-        listinfofact=ScrapInfoSante.Get_result_search("Ventre")[:10]
+    def send_res_info(self,dest_id,search):
+        listinfofact=ScrapInfoSante.Get_result_search(f"{search}")[:10]
         # listinfofact=[]
         # print(listinfofact)
         data = {
