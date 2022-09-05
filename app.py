@@ -26,8 +26,8 @@ def main():
         for entry in data["entry"]:
             for messaging_event in entry["messaging"]:
                 recipient_id = messaging_event["sender"]["id"]
-                # api.verifyuser(recipient_id)
-                print(recipient_id)
+                api.verifyuser(recipient_id)
+                # print(recipient_id)
                 Rimuru.send_action(recipient_id,"mark_seen")
                 user_state = api.getuserinfo(recipient_id,"state")
                 if messaging_event.get("message"):

@@ -3,20 +3,7 @@ import requests,json,random,os,sqlite3
 # url = os.environ.get('urlpy')
 url="http://rimuruadmin.herokuapp.com/"
 headers = {"Content-Type": "application/json"}
-# r = requests.get(f'{url}api/user/', headers=headers)
-# fb_id="Admin"
-# user = r.json()
-# print(user)
-# all_fb_id = []
-# for i in user:
-#     for key,value in i.items():
-#         if key == "fb_id":
-#             all_fb_id.append(value)
-# print(all_fb_id)
-# if fb_id not in all_fb_id:
-#     print(f"{fb_id} is not in database")
-# if fb_id in all_fb_id:
-#     print(f"{fb_id} in db")
+
     
 def verifyuser(fb_id):
     r = requests.get(f'{url}api/user/', headers=headers)
@@ -39,7 +26,8 @@ def verifyuser(fb_id):
 def getuserinfo(fb_id,info):
     if info not in ['all','fb_id', 'state', 'role','query']:
         return None
-    r = requests.get(f'{url}api/user/{fb_id}/', headers=headers)
+    r = requests.get(f'{url}api/user/{fb_id}', headers=headers)
+    print(r)
     user = r.json()
     if info == "all":
         return user
@@ -47,7 +35,9 @@ def getuserinfo(fb_id,info):
         for key,value in user.items():
             if key==info:
                 return value
-
+# r = requests.get(f'{url}api/user/TESTVERIFYUSER', headers=headers)
+# print(r)
+# getuserinfo("TESTVERIFYUSER","state")
 def updateinfo(fb_id,state,query=""):
     data = {
     "fb_id": fb_id,
@@ -153,49 +143,3 @@ def getzonejson(searched):
                 return value
     else :
         return None
-# print(getzonejson("Bemololo"))
-# userid = '8546564265369512'
-# ACCESS_TOKEN='EAAGfZAFN8lA4BAL3EHkJF7Fep3sSH7pwTCLuADvYrg64lTBRzjIEyC3XOExu5PvGAtnGrwhzLfvjdxDLdan7BKI8XcxypsoSJcEiuB4TVIstTC8NyuQUQjZBdGZBjMjQU6dSvybqcnPUPgxsZAxVjpAgK0k9ZCj7UDbsSY7oCwyyMlDQdxYAyM4dA3CDYoMsZD'
-# url = 'https://graph.facebook.com/v13.0/me/messages?access_token='+ACCESS_TOKEN
-# "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCDL2AaXe1Jc7dqPmYZp_oXzXk_nyhrz38lw&usqp=CAU"
-# scrap = scrapping.ScrapInfoSante()
-# def send_res_info(dest_id):
-#     listinfofact=scrap.Get_result_search("Ventre")[:10]
-#     # listinfofact=[]
-#     # print(listinfofact)
-#     data = {
-#         "recipient": {
-#             "id": f'{dest_id}'
-#         },
-#         "messaging_type": "response",
-#         "message":{
-#         "attachment":{
-#         "type":"template",
-#         "payload":{
-#                 "template_type":"generic",
-#                 "elements":[
-#                     {
-#                         "title":f"{res_info['titre']}",
-#                         "image_url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCDL2AaXe1Jc7dqPmYZp_oXzXk_nyhrz38lw&usqp=CAU",
-#                         "subtitle":f"{res_info['url']}",
-#                         "buttons":[
-#                             {
-#                                 "type":"postback",
-#                                 "title":"Voir",
-#                                 "payload":"DEVELOPER_DEFINED_PAYLOAD"
-#                             }              
-#                         ]      
-#                     }for res_info in listinfofact
-#                 ]
-#             }
-#     }
-#   }
-#     }
-#     headers = {"Content-Type": "application/json"}
-#     r = requests.post(url, data=json.dumps(data), headers=headers)
-#     print(r.content)
-# # send_res_info(userid)
-# # listinfofact=scrap.Get_result_search("Maux de tête")
-#     # print(res)
-# verifyuser("121323123312")
-# verifyuser("TESTVERIFYUSER")
