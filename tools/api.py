@@ -3,18 +3,35 @@ import requests,json,random,os,sqlite3
 url = os.environ.get('urlpy')
 # url="http://127.0.0.1:8000/"
 headers = {"Content-Type": "application/json"}
-
+r = requests.get(f'{url}api/user/', headers=headers)
+fb_id="Admin"
+user = r.json()
+print(user)
+all_fb_id = []
+for i in user:
+    for key,value in i.items():
+        if key == "fb_id":
+            all_fb_id.append(value)
+print(all_fb_id)
+if fb_id not in all_fb_id:
+    print(f"{fb_id} is not in database")
+if fb_id in all_fb_id:
+    print(f"{fb_id} in db")
+    
 def verifyuser(fb_id):
     r = requests.get(f'{url}api/user/', headers=headers)
     user = r.json()
+    print(user)
     all_fb_id = []
     for i in user:
         for key,value in i.items():
             if key == "fb_id":
                 all_fb_id.append(value)
+    print(all_fb_id)
     if fb_id not in all_fb_id:
         print(f"{fb_id} is not in database")
-        insertuser(fb_id)
+    if fb_id in all_fb_id:
+        print(f"{fb_id} in db")
 
 def getuserinfo(fb_id,info):
     if info not in ['all','fb_id', 'state', 'role','query']:
@@ -177,3 +194,4 @@ url = 'https://graph.facebook.com/v13.0/me/messages?access_token='+ACCESS_TOKEN
 # # send_res_info(userid)
 # # listinfofact=scrap.Get_result_search("Maux de tête")
 #     # print(res)
+# verifyuser("121323123312")
