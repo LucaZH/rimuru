@@ -3,20 +3,20 @@ import requests,json,random,os,sqlite3
 url = os.environ.get('urlpy')
 # url="http://127.0.0.1:8000/"
 headers = {"Content-Type": "application/json"}
-r = requests.get(f'{url}api/user/', headers=headers)
-fb_id="Admin"
-user = r.json()
-print(user)
-all_fb_id = []
-for i in user:
-    for key,value in i.items():
-        if key == "fb_id":
-            all_fb_id.append(value)
-print(all_fb_id)
-if fb_id not in all_fb_id:
-    print(f"{fb_id} is not in database")
-if fb_id in all_fb_id:
-    print(f"{fb_id} in db")
+# r = requests.get(f'{url}api/user/', headers=headers)
+# fb_id="Admin"
+# user = r.json()
+# print(user)
+# all_fb_id = []
+# for i in user:
+#     for key,value in i.items():
+#         if key == "fb_id":
+#             all_fb_id.append(value)
+# print(all_fb_id)
+# if fb_id not in all_fb_id:
+#     print(f"{fb_id} is not in database")
+# if fb_id in all_fb_id:
+#     print(f"{fb_id} in db")
     
 def verifyuser(fb_id):
     r = requests.get(f'{url}api/user/', headers=headers)
@@ -25,6 +25,7 @@ def verifyuser(fb_id):
     all_fb_id = []
     for i in user:
         for key,value in i.items():
+            print("arrive")
             if key == "fb_id":
                 all_fb_id.append(value)
     print(all_fb_id)
