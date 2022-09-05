@@ -17,6 +17,7 @@ class ScrapInfoSante():
         self.driver = webdriver.Chrome(service=self.service,options=self.chop)
         
     def Get_result_search(self,query):
+        print("send result info")
         TextSearchResult= []
         UrlSearchResult=[]
         ListResult = []
@@ -36,6 +37,7 @@ class ScrapInfoSante():
                 'url': UrlSearchResult[j]
             }
             ListResult.append(info)
+        print("get result")
         return ListResult
 
     def GetInfoSante(self,URLSANTE):

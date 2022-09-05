@@ -62,8 +62,11 @@ def main():
                             if user_state =='INFO':
                                 api.updateinfo(recipient_id,'START',query=query)
                                 Rimuru.send_text(recipient_id,"Envoie du resultat de recherche en cour ...")
+                                print("Envoie du resultat de recherche en cour")
                                 Rimuru.send_res_info(recipient_id,query)
+                                print("ARRIVER INFO")
                                 Rimuru.send_menu(recipient_id,main_menu,f"{message_menu[0]}")
+
                     if 'quick_reply' in messaging_event['message']:
                         Rimuru.send_action(recipient_id,"mark_seen")
                         payload = messaging_event['message']['quick_reply']['payload']
@@ -103,8 +106,10 @@ def main():
                                 elif payload['query_hosp']=='Aider':
                                     Rimuru.send_text(recipient_id,"Entrer le centre medical ou hopital que vous voulez ajouter en separant le nom , la localisation et le contact par une virgule (,) \n exemple : Hopital Fy , Vatofotsy , 034456655")
                                     api.updateinfo(recipient_id,'CM_HE')
-                                elif payload['query_hosp']=='main_menu':
+                                elif payload['query_hosp']=='main_menuh':
                                     api.updateinfo(recipient_id,'START')
+                                    Rimuru.send_menu(recipient_id,main_menu,f"{message_menu[0]}")
+                                    Rimuru.send_action(recipient_id,"typing_off")
                             elif 'query_ph' in payload:
                                 if payload['query_ph']=='Rechercher':
                                     Rimuru.send_text(recipient_id,"Entrer votre localisation")
@@ -112,6 +117,11 @@ def main():
                                 elif payload['query_ph']=='Aider':
                                     Rimuru.send_text(recipient_id,"Entrer la pharmacie que vous voulez ajouter en separant le nom , la localisation et le contact par une virgule (,) \n exemple : Pharmacie Fy , Vatofotsy , 034456655")
                                     api.updateinfo(recipient_id,'PH_HE')
+                                elif payload['query_ph']=='main_menuph':
+                                    api.updateinfo(recipient_id,'START')
+                                    Rimuru.send_menu(recipient_id,main_menu,f"{message_menu[0]}")
+                                    Rimuru.send_action(recipient_id,"typing_off")
+
                             elif 'option_co' in payload:
                                 if payload['option_co'] == 'retry_co':
                                     Rimuru.send_text(recipient_id,api.getrandomconseil())

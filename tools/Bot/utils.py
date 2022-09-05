@@ -63,7 +63,7 @@ menu_CM = [
             'content_type': 'text',
             'title': 'Retour au menu principal',
             "payload": json.dumps({
-                'query_hosp': 'main_menu',
+                'query_hosp': 'main_menuh',
             })
         }
         ]
@@ -86,7 +86,7 @@ menu_PH = [
             'content_type': 'text',
             'title': 'Retour au menu principal',
             "payload": json.dumps({
-                'query_hosp': 'main_menu',
+                'query_ph': 'main_menuph',
             })
         }
         ]

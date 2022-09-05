@@ -7,16 +7,15 @@ headers = {"Content-Type": "application/json"}
     
 def verifyuser(fb_id):
     r = requests.get(f'{url}api/user/', headers=headers)
-    print(r.content)
+    # print(r.content)
     user = r.json()
-    print(user)
+    # print(user)
     all_fb_id = []
     for i in user:
         for key,value in i.items():
-            print("arrive")
             if key == "fb_id":
                 all_fb_id.append(value)
-    print(all_fb_id)
+    # print(all_fb_id)
     if fb_id not in all_fb_id:
         insertuser(fb_id)
         print(f"{fb_id} is not in database")
@@ -27,7 +26,6 @@ def getuserinfo(fb_id,info):
     if info not in ['all','fb_id', 'state', 'role','query']:
         return None
     r = requests.get(f'{url}api/user/{fb_id}', headers=headers)
-    print(r)
     user = r.json()
     if info == "all":
         return user
