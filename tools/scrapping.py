@@ -11,9 +11,9 @@ class ScrapInfoSante():
         self.chop = webdriver.ChromeOptions()
         self.chop.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
         self.chop.add_extension("tools/I-don-t-care-about-cookies.crx")
-        self.chop.add_argument("--headless")
-        self.chop.add_argument("--no-sandbox")
-        self.chop.add_argument("--disable-dev-sh-usage")
+        # self.chop.add_argument("--headless")
+        # self.chop.add_argument("--no-sandbox")
+        # self.chop.add_argument("--disable-dev-sh-usage")
         self.driver = webdriver.Chrome(service=self.service,options=self.chop)
         
     def Get_result_search(self,query):
