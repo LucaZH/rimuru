@@ -80,6 +80,7 @@ class Messenger:
     def send_info(self,dest_id,URLSANTE):
         scrap = ScrapInfoSante()
         listinfo=scrap.GetInfoSante(URLSANTE)
+        print(listinfo)
         data = {
             "recipient": {
                 "id": f'{dest_id}'
