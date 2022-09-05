@@ -137,7 +137,7 @@ def main():
                         # if pload=="Voir":
                         #     Rimuru.send_info_fact(recipient_id)
                         
-                        if is_json(pload):
+                        elif is_json(pload):
                             pload_json = json.loads(pload)
                             print(pload_json)
                             if 'voir' in payload:
