@@ -9,7 +9,7 @@ ACCESS_TOKEN = os.environ.get("ACCESS_TOKEN")
 VERIFY_TOKEN = os.environ.get("VERIFY_TOKEN")
 
 Rimuru = Messenger(ACCESS_TOKEN)
-print(ACCESS_TOKEN)
+# print(ACCESS_TOKEN)
 @app.route("/", methods=['GET'])
 def handle_verification():
         if (request.args.get('hub.verify_token', '') == VERIFY_TOKEN):
@@ -26,7 +26,8 @@ def main():
         for entry in data["entry"]:
             for messaging_event in entry["messaging"]:
                 recipient_id = messaging_event["sender"]["id"]
-                api.verifyuser(recipient_id)
+                # api.verifyuser(recipient_id)
+                print(recipient_id)
                 Rimuru.send_action(recipient_id,"mark_seen")
                 user_state = api.getuserinfo(recipient_id,"state")
                 if messaging_event.get("message"):

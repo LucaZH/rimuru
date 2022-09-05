@@ -1,7 +1,7 @@
 import requests,json,random,os,sqlite3
 
-url = os.environ.get('urlpy')
-# url="http://127.0.0.1:8000/"
+# url = os.environ.get('urlpy')
+url="http://rimuruadmin.herokuapp.com/"
 headers = {"Content-Type": "application/json"}
 # r = requests.get(f'{url}api/user/', headers=headers)
 # fb_id="Admin"
@@ -20,6 +20,7 @@ headers = {"Content-Type": "application/json"}
     
 def verifyuser(fb_id):
     r = requests.get(f'{url}api/user/', headers=headers)
+    print(r.content)
     user = r.json()
     print(user)
     all_fb_id = []
@@ -30,6 +31,7 @@ def verifyuser(fb_id):
                 all_fb_id.append(value)
     print(all_fb_id)
     if fb_id not in all_fb_id:
+        insertuser(fb_id)
         print(f"{fb_id} is not in database")
     if fb_id in all_fb_id:
         print(f"{fb_id} in db")
@@ -66,7 +68,7 @@ def insertuser(fb_id, state='START'):
     r = requests.post(f'{url}api/user/', data= json.dumps(data),headers=headers)
     print(r.content)
     print(f"user {fb_id} insered")
-
+# insertuser("Luca")
 def getconseil(id):
     r = requests.get(f'{url}api/conseil/{id}',headers=headers)
     cons = r.json()
@@ -152,9 +154,9 @@ def getzonejson(searched):
     else :
         return None
 # print(getzonejson("Bemololo"))
-userid = '8546564265369512'
-ACCESS_TOKEN='EAAGfZAFN8lA4BAL3EHkJF7Fep3sSH7pwTCLuADvYrg64lTBRzjIEyC3XOExu5PvGAtnGrwhzLfvjdxDLdan7BKI8XcxypsoSJcEiuB4TVIstTC8NyuQUQjZBdGZBjMjQU6dSvybqcnPUPgxsZAxVjpAgK0k9ZCj7UDbsSY7oCwyyMlDQdxYAyM4dA3CDYoMsZD'
-url = 'https://graph.facebook.com/v13.0/me/messages?access_token='+ACCESS_TOKEN
+# userid = '8546564265369512'
+# ACCESS_TOKEN='EAAGfZAFN8lA4BAL3EHkJF7Fep3sSH7pwTCLuADvYrg64lTBRzjIEyC3XOExu5PvGAtnGrwhzLfvjdxDLdan7BKI8XcxypsoSJcEiuB4TVIstTC8NyuQUQjZBdGZBjMjQU6dSvybqcnPUPgxsZAxVjpAgK0k9ZCj7UDbsSY7oCwyyMlDQdxYAyM4dA3CDYoMsZD'
+# url = 'https://graph.facebook.com/v13.0/me/messages?access_token='+ACCESS_TOKEN
 # "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCDL2AaXe1Jc7dqPmYZp_oXzXk_nyhrz38lw&usqp=CAU"
 # scrap = scrapping.ScrapInfoSante()
 # def send_res_info(dest_id):
@@ -196,3 +198,4 @@ url = 'https://graph.facebook.com/v13.0/me/messages?access_token='+ACCESS_TOKEN
 # # listinfofact=scrap.Get_result_search("Maux de tête")
 #     # print(res)
 # verifyuser("121323123312")
+# verifyuser("TESTVERIFYUSER")
