@@ -77,87 +77,6 @@ class Messenger:
 
         headers = {"Content-Type": "application/json"}
         r = requests.post('https://graph.facebook.com/v14.0/me/messenger_profile?access_token=' + self.ACCESS_TOKEN, data=json.dumps(data), headers=headers)
-
-    def send_news_suggestion(self,dest_id):
-        list_news = get_news()
-        if len(list_news)>=12:
-            current_list_news = list_news[:12]
-            splited_list_news = list_news[12:len(list_news)]
-            
-        else : 
-            current_list_news = list_news[:len(list_news)/2]
-            splited_list_news = list_news[len(list_news)/2:len(list_news)]
-
-        print(current_list_news)
-        data1 = {
-            "recipient": {
-                "id": f'{dest_id}'
-            },
-            "messaging_type": "response",
-            "message": {
-                "attachment": {
-                    "type": "template",
-                    "payload": {
-                        "template_type": "generic",
-                        "elements": [
-                            {
-                                "title": f"{news['title']}",
-                                "image_url": f"{news['thumbnail']}",
-                                "publishedTime": f"{news['publishedTime']}",
-
-                                "buttons": [
-                                    {
-                                        "type": "postback",
-                                        "title": "Lire",
-                                        "payload": json.dumps({
-                                            'read': news['url']
-                                        })
-                                    },
-                                ]
-                            } for news in current_list_news
-                        ]
-                    },
-                    
-                },
-            }
-        }
-        data2 = {
-            "recipient": {
-                "id": f'{dest_id}'
-            },
-            "messaging_type": "response",
-            "message": {
-                "attachment": {
-                    "type": "template",
-                    "payload": {
-                        "template_type": "generic",
-                        "elements": [
-                            {
-                                "title": f"{news['title']}",
-                                "image_url": f"{news['thumbnail']}",
-                                "publishedTime": f"{news['publishedTime']}",
-
-                                "buttons": [
-                                    {
-                                        "type": "postback",
-                                        "title": "Lire",
-                                        "payload": json.dumps({
-                                            'read': news['url']
-                                        })
-                                    },
-                                ]
-                            } for news in splited_list_news
-                        ]
-                    },
-                    
-                },
-            }
-        }
-        headers = {"Content-Type": "application/json"}
-        r1 = requests.post(self, data=json.dumps(data1), headers=headers)
-        r2 = requests.post(self, data=json.dumps(data2), headers=headers)
-        print(r1.content)
-        print(r2.content)
     def send_info(self,dest_id,URLSANTE):
         scrap = ScrapInfoSante()
         tittreinfo=["De quoi s’agit-il ?","Quelle est sa fréquence ?","Comment le reconnaître ?","Comment le diagnostic est-il posé ?","Que pouvez-vous faire ?","Que peut faire votre médecin ?"]
@@ -202,49 +121,10 @@ class Messenger:
         headers = {"Content-Type": "application/json"}
         r = requests.post(self.url, data=json.dumps(data), headers=headers)
         print(r.content)
-    def send_res_info_fact(self,dest_id):
-        listinfofact=[]
-        # print(listinfofact)
-        for i in range(len(resultat_info)):
-                listinfofact.append({
-                    "text": resultat_info[i],
-                })
-        data = {
-            "recipient": {
-                "id": f'{dest_id}'
-            },
-            "messaging_type": "response",
-            "message":{
-            "attachment":{
-            "type":"template",
-            "payload":{
-                    "template_type":"generic",
-                    "elements":[
-                        {
-                            "title":f"Résultats",
-                            "image_url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCDL2AaXe1Jc7dqPmYZp_oXzXk_nyhrz38lw&usqp=CAU",
-                            "subtitle":f"{res_info_fact['text']}",
-                            "buttons":[
-                                {
-                                    "type":"postback",
-                                    "title":"Voir",
-                                    "payload":"Voir"
-                                }              
-                            ]      
-                        }for res_info_fact in listinfofact
-                    ]
-                }
-        }
-    }
-        }
-        headers = {"Content-Type": "application/json"}
-        r = requests.post(self.url, data=json.dumps(data), headers=headers)
-        print(r.content)
+   
     def send_res_info(self,dest_id,search):
         scrap = ScrapInfoSante()
         listinfofact=scrap.Get_result_search(f"{search}")[:10]
-        # listinfofact=[]
-        # print(listinfofact)
         data = {
             "recipient": {
                 "id": f'{dest_id}'

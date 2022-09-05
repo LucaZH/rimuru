@@ -121,10 +121,7 @@ def main():
                                     api.updateinfo(recipient_id,'START')
                                     Rimuru.send_menu(recipient_id,main_menu,f"{message_menu[0]}")
                                     Rimuru.send_action(recipient_id,"typing_off")
-                            elif 'voir' in payload:
-                                info_Url = payload['voir']
-                                Rimuru.send_res_info(recipient_id,info_Url)
-                                Rimuru.send_menu(recipient_id,main_menu,f"{message_menu[0]}")
+                            
                             elif 'option_co' in payload:
                                 if payload['option_co'] == 'retry_co':
                                     Rimuru.send_text(recipient_id,api.getrandomconseil())
@@ -137,11 +134,16 @@ def main():
                         pload = messaging_event['postback']['payload']
                         if 'get_started' == pload:
                             Rimuru.send_menu(recipient_id,main_menu,"Bonjour je suis Rimuru,Qu'est ce que je peux faire pour vous?")
-                        if pload=="Voir":
-                            Rimuru.send_info_fact(recipient_id)
+                        # if pload=="Voir":
+                        #     Rimuru.send_info_fact(recipient_id)
+                        
                         if is_json(pload):
                             pload_json = json.loads(pload)
                             print(pload_json)
+                            if 'voir' in payload:
+                                info_Url = pload_json['voir']
+                                Rimuru.send_res_info(recipient_id,info_Url)
+                                Rimuru.send_action(recipient_id,"typing_of")
                             if 'read' in pload_json:
                                 text_info = pload_json['read']
                                 print("arrived")
