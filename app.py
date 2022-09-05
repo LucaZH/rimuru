@@ -65,7 +65,7 @@ def main():
                                 print("Envoie du resultat de recherche en cour")
                                 Rimuru.send_res_info(recipient_id,query)
                                 print("ARRIVER INFO")
-                                Rimuru.send_menu(recipient_id,main_menu,f"{message_menu[0]}")
+                                
 
                     if 'quick_reply' in messaging_event['message']:
                         Rimuru.send_action(recipient_id,"mark_seen")
@@ -121,7 +121,10 @@ def main():
                                     api.updateinfo(recipient_id,'START')
                                     Rimuru.send_menu(recipient_id,main_menu,f"{message_menu[0]}")
                                     Rimuru.send_action(recipient_id,"typing_off")
-
+                            elif 'voir' in payload:
+                                info_Url = payload['voir']
+                                Rimuru.send_res_info(recipient_id,info_Url)
+                                Rimuru.send_menu(recipient_id,main_menu,f"{message_menu[0]}")
                             elif 'option_co' in payload:
                                 if payload['option_co'] == 'retry_co':
                                     Rimuru.send_text(recipient_id,api.getrandomconseil())
