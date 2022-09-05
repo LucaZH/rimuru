@@ -11,8 +11,7 @@ class ScrapInfoSante():
         self.chrome_options = webdriver.ChromeOptions()
         self.chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
         # self.chrome_options.add_argument('--headless')
-        self.chrome_options.addArguments("start-maximized")
-        self.chrome_options.addArguments("disable-infobars")
+        self.chrome_options.headless = True
         self.chrome_options.add_argument('--disable-gpu')
         self.chrome_options.add_argument('--no-sandbox')
         self.chrome_options.add_extension("tools/I-don-t-care-about-cookies.crx")
