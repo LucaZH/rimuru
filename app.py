@@ -142,7 +142,9 @@ def main():
                             print(pload_json)
                             if 'voir' in payload:
                                 info_Url = pload_json['voir']
-                                Rimuru.send_res_info(recipient_id,info_Url)
+                                print("arrived")
+                                print(info_Url)
+                                Rimuru.send_info(recipient_id,info_Url)
                                 Rimuru.send_action(recipient_id,"typing_of")
                             if 'read' in pload_json:
                                 text_info = pload_json['read']
