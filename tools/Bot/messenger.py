@@ -95,7 +95,7 @@ class Messenger:
                         {
                             "title":f"{info_fact['titre']}",
                             "image_url":"https://cdn-icons-png.flaticon.com/512/2764/2764545.png",
-                            "subtitle":f"{info_fact['text']}",
+                            "subtitle":f"{self.splitedliste(info_fact['text'])}",
                             "buttons":[
                                 {
                                     "type":"postback",
@@ -151,3 +151,6 @@ class Messenger:
         headers = {"Content-Type": "application/json"}
         r = requests.post(self.url, data=json.dumps(data), headers=headers)
         print(r.content)            
+    def splitedliste(self , tosplitinfo):
+        splited =tosplitinfo.split(".")
+        return splited[0]
