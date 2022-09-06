@@ -101,7 +101,7 @@ class Messenger:
                                     "type":"postback",
                                     "title":"Lire",
                                     "payload":json.dumps({
-                                        'read': info_fact['text'][:100]
+                                        'read': info_fact['text']
                                     })
                                 }              
                             ]      
