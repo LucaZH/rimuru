@@ -95,13 +95,13 @@ class Messenger:
                         {
                             "title":f"{info_fact['titre']}",
                             "image_url":"https://cdn-icons-png.flaticon.com/512/2764/2764545.png",
-                            "subtitle":f"{info_fact['text'][:100]}",
+                            "subtitle":f"{info_fact['text'][:500]}",
                             "buttons":[
                                 {
                                     "type":"postback",
                                     "title":"Lire",
                                     "payload":json.dumps({
-                                        'read': info_fact['text']
+                                        'read': info_fact['text'][:800]
                                     })
                                 }              
                             ]      
