@@ -101,7 +101,7 @@ class Messenger:
                                     "type":"postback",
                                     "title":"Lire",
                                     "payload":json.dumps({
-                                        'read': info_fact['text']
+                                        'read': (info_fact['text'][:900] + '..') if len(info_fact['text']) > 900 else info_fact['text']
                                     })
                                 }              
                             ]      
