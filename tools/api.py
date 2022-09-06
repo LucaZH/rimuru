@@ -19,8 +19,7 @@ def verifyuser(fb_id):
     if fb_id not in all_fb_id:
         insertuser(fb_id)
         print(f"{fb_id} is not in database")
-    if fb_id in all_fb_id:
-        print(f"{fb_id} in db")
+    
 
 def getuserinfo(fb_id,info):
     if info not in ['all','fb_id', 'state', 'role','query']:

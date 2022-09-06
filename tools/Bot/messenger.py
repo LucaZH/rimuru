@@ -95,7 +95,7 @@ class Messenger:
                         {
                             "title":f"{info_fact['titre']}",
                             "image_url":"https://cdn-icons-png.flaticon.com/512/2764/2764545.png",
-                            "subtitle":f"{(info_fact['text'][:999] + '..') if len(info_fact['text']) > 999 else info_fact['text']}",
+                            "subtitle":f"{(info_fact['text'][:900] + '..') if len(info_fact['text']) > 900 else info_fact['text']}",
                             "buttons":[
                                 {
                                     "type":"postback",
