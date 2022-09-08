@@ -97,7 +97,7 @@ def insertinfo(option,info,publisher_id):
             'contact':resultsplit[2],
             'verifier': False,
             'publier_par':publisher_id,
-            'zone':0
+            'zone':getzonejson(resultsplit[1])
         }
     elif len(resultsplit)==2:
         data= {
@@ -106,7 +106,7 @@ def insertinfo(option,info,publisher_id):
             'contact':'',
             'verifier': False,
             'publier_par':publisher_id,
-            'zone':0
+            'zone':getzonejson(resultsplit[1])
         }
 
     r = requests.post(f'{url}api/{option}/',data= json.dumps(data),headers=headers)
@@ -140,3 +140,4 @@ def getzonejson(searched):
                 return value
     else :
         return None
+# print(getzonejson("Vatofotsy"))

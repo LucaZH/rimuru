@@ -75,7 +75,7 @@ def main():
                             if 'menu' in payload:
                                 if payload['menu'] == 'CM':
                                     Rimuru.send_text(recipient_id,"Bienvenu dans l'option Centre medical, ici vous pouvez soit rechercher un information concernant une Centre Medical soit en ajouter un\n L'ajout devra d'abord être verifier par l'admin ")
-                                   
+        
                                     Rimuru.send_menu(recipient_id,menu_CM,"Que choisisez-vous?")
                                 elif payload['menu'] =='pharmacie':
                                     Rimuru.send_text(recipient_id,"Bienvenu dans l'option Pharmacie , ici vous pouvez soit rechercher un information concernant un pharmacie soit en ajouter un\n L'ajout devra d'abord être verifier par l'admin")
