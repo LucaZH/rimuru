@@ -61,7 +61,7 @@ def main():
                             #     Rimuru.send_menu(recipient_id,retry_co,'cliquer sur ces bouton')
                             if user_state =='INFO':
                                 api.updateinfo(recipient_id,'START',query=query)
-                                Rimuru.send_text(recipient_id,"Envoie du resultat de recherche en cour ...")
+                                Rimuru.send_text(recipient_id,"Envoie du resultat de recherche en cours ...")
                                 print("Envoie du resultat de recherche en cour")
                                 Rimuru.send_res_info(recipient_id,query)
                                 print("ARRIVER INFO")
@@ -133,7 +133,7 @@ def main():
                     if 'payload' in messaging_event['postback']:
                         pload = messaging_event['postback']['payload']
                         if 'get_started' == pload:
-                            Rimuru.send_menu(recipient_id,main_menu,"Bonjour je suis Rimuru,Qu'est ce que je peux faire pour vous?")
+                            Rimuru.send_menu(recipient_id,main_menu,"Bonjour et Bienvenue ,je suis Rimuru,Qu'est ce que je peux faire pour vous?")
                         # if pload=="Voir":
                         #     Rimuru.send_info_fact(recipient_id)
                         
