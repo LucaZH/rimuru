@@ -160,6 +160,7 @@ Rimuru.get_stared()
 
 def getinfo(option,query,recipient_id):
     r= api.getinfobyzone(option,api.getzonejson(query))
+    Rimuru.send_text(recipient_id,f"Voilà le(s) résultat(s) de votre recherche : {query} ")
     if r!=[]:
         for i in range(len(r)):
             if r[i]["contact"]!="":
@@ -170,7 +171,7 @@ def getinfo(option,query,recipient_id):
                 Rimuru.send_text(recipient_id,f'{r[i]["nom"]} {r[i]["localisation"]}')
     else:
         print("No found")
-        Rimuru.send_text(recipient_id,"Introuvable")
+        Rimuru.send_text(recipient_id,"L'emplacement que vous avez rechercher ne contient peut être pas encore d'information")
         
 def is_json(myjson):
     try:
