@@ -48,13 +48,15 @@ menu_CM = [
         {
             'content_type': 'text',
             'title': 'Rechercher',
+            'image_url':"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaO-KtMrTzRRPDbYRZu8dIs5Gl6cfYCEZ4kA&usqp=CAU",
             "payload": json.dumps({
                 'query_hosp': 'Rechercher',
             })
         },
         {
             'content_type': 'text',
-            'title': 'Aider',
+            'title': 'Ajouter',
+            'image_url':"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbGS3cjMKA1uTKKimJ-MgAU_WvqGWbNS_nNw&usqp=CAU",
             "payload": json.dumps({
                 'query_hosp': 'Aider',
             })
@@ -71,13 +73,15 @@ menu_PH = [
         {
             'content_type': 'text',
             'title': 'Rechercher',
+            'image_url':"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaO-KtMrTzRRPDbYRZu8dIs5Gl6cfYCEZ4kA&usqp=CAU",
             "payload": json.dumps({
                 'query_ph': 'Rechercher',
             })
         },
         {
             'content_type': 'text',
-            'title': 'Aider',
+            'title': 'Ajouter',
+            'image_url':"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbGS3cjMKA1uTKKimJ-MgAU_WvqGWbNS_nNw&usqp=CAU",
             "payload": json.dumps({
                 'query_ph': 'Aider',
             })
