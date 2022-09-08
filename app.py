@@ -165,7 +165,7 @@ def getinfo(option,query,recipient_id):
         for i in range(len(r)):
             if r[i]["contact"]!="":
                 print(f'{r[i]["nom"]} {r[i]["localisation"]} {r[i]["contact"]}')
-                Rimuru.send_text(recipient_id,f'Nom du centre medical : {r[i]["nom"]} \nEmplacement :{r[i]["localisation"]}\ncontact: {r[i]["contact"]}')
+                Rimuru.send_text(recipient_id,f'Resultats : {i}/{len(r)}\nNom du centre medical : {r[i]["nom"]} \nEmplacement :{r[i]["localisation"]}\ncontact: {r[i]["contact"]}')
             else:
                 print(f'{r[i]["nom"]} {r[i]["localisation"]}')
                 Rimuru.send_text(recipient_id,f'Nom du centre medical : {r[i]["nom"]} \nEmplacement :{r[i]["localisation"]}')
