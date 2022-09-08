@@ -233,6 +233,7 @@
         "name": "Verezambola",
         "zone": 5
     },
+    
     {
         "commune": "Antsirabe Afovoany Atsinanana",
         "district": "Antsirabe I",
@@ -1473,7 +1474,7 @@
         "commune": "Antsoatany",
         "district": "Antsirabe II",
         "name": "Ambohimena",
-        "zone": null
+        "zone": 5
     },
     {
         "commune": "Antsoatany",
