@@ -94,6 +94,7 @@ def main():
                                     Rimuru.send_menu(recipient_id,retry_co,"Qu'est ce que vous voullez faire?")
                                 elif payload['menu'] =='Apropos':
                                     Rimuru.send_text(recipient_id,'Devollopé par RANDRIAMANANTENA Luca Zo Haingo')
+                                    Rimuru.send_menu(recipient_id,main_menu,f"{message_menu[0]}")
                             elif 'actualite_covid19' in payload:
                                     Rimuru.send_text(recipient_id,'Actualité covid : Developpement du projet en cours')
                                     print("asdf")

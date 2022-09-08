@@ -63,7 +63,8 @@ menu_CM = [
         },
         {
             'content_type': 'text',
-            'title': 'Retour au menu principal',
+            'title': 'Menu principal',
+            'image_url':"https://assets.stickpng.com/images/588a64cdd06f6719692a2d0d.png",
             "payload": json.dumps({
                 'query_hosp': 'main_menuh',
             })
@@ -88,7 +89,8 @@ menu_PH = [
         },
         {
             'content_type': 'text',
-            'title': 'Retour au menu principal',
+            'title': 'Menu principal',
+            'image_url':"https://assets.stickpng.com/images/588a64cdd06f6719692a2d0d.png",
             "payload": json.dumps({
                 'query_ph': 'main_menuph',
             })
