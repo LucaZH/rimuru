@@ -168,7 +168,7 @@ def getinfo(option,query,recipient_id):
                 Rimuru.send_text(recipient_id,f'Resultats : {i}/{len(r)}\nNom du centre medical : {r[i]["nom"]} \nEmplacement :{r[i]["localisation"]}\ncontact: {r[i]["contact"]}')
             else:
                 print(f'{r[i]["nom"]} {r[i]["localisation"]}')
-                Rimuru.send_text(recipient_id,f'Nom du centre medical : {r[i]["nom"]} \nEmplacement :{r[i]["localisation"]}')
+                Rimuru.send_text(recipient_id,f'Resultats : {i}/{len(r)}\nNom du centre medical : {r[i]["nom"]} \nEmplacement :{r[i]["localisation"]}')
     else:
         print("No found")
         Rimuru.send_text(recipient_id,"L'emplacement que vous avez rechercher ne contient peut être pas encore d'information")
