@@ -32,9 +32,6 @@ def getuserinfo(fb_id,info):
         for key,value in user.items():
             if key==info:
                 return value
-# r = requests.get(f'{url}api/user/TESTVERIFYUSER', headers=headers)
-# print(r)
-# print(getuserinfo("8546564265369512","state"))
 def updateinfo(fb_id,state,query=""):
     data = {
     "fb_id": fb_id,
@@ -83,9 +80,6 @@ def getinfobyzone(option,searched):
             if key=="verifier" and value==True:
                 resultat_verified.append(resultat[i])
     return resultat_verified
-
-
-
 def insertinfo(option,info,publisher_id):
     if option not in ['pharmacie','cm']:
         return None
@@ -140,4 +134,3 @@ def getzonejson(searched):
                 return value
     else :
         return None
-# print(getzonejson("Vatofotsy"))
