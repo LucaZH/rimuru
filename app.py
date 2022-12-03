@@ -9,7 +9,6 @@ ACCESS_TOKEN = os.environ.get("ACCESS_TOKEN")
 VERIFY_TOKEN = os.environ.get("VERIFY_TOKEN")
 
 Rimuru = Messenger(ACCESS_TOKEN)
-# print(ACCESS_TOKEN)
 @app.route("/", methods=['GET'])
 def handle_verification():
         if (request.args.get('hub.verify_token', '') == VERIFY_TOKEN):
@@ -64,8 +63,7 @@ def main():
                                 Rimuru.send_text(recipient_id,"Envoie du resultat de recherche en cours ...")
                                 print("Envoie du resultat de recherche en cour")
                                 Rimuru.send_res_info(recipient_id,query)
-                                print("ARRIVER INFO")
-                                
+                                print("ARRIVER INFO")      
 
                     if 'quick_reply' in messaging_event['message']:
                         Rimuru.send_action(recipient_id,"mark_seen")
@@ -151,9 +149,6 @@ def main():
                                 text_info = pload_json['read']
                                 print("arrived")
                                 Rimuru.send_text(recipient_id,text_info)
-                            
-
-
     return 'ok'
     
 Rimuru.get_stared()
